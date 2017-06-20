@@ -7,1113 +7,1985 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		29CA96E21D8876EB0027D914 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 29CA96E01D8876EB0027D914 /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		29CA96FC1D8877040027D914 /* SCRAM.h in Headers */ = {isa = PBXBuildFile; fileRef = 29CA96FA1D8877040027D914 /* SCRAM.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		29CA970D1D887C460027D914 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B3CC441CA1C39C003FC6DF /* GCDAsyncSocket.m */; };
-		29CA970E1D887C480027D914 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B3CC441CA1C39C003FC6DF /* GCDAsyncSocket.m */; };
-		29CA970F1D887C5D0027D914 /* SCRAM.m in Sources */ = {isa = PBXBuildFile; fileRef = 65368F891CC6CE1600302942 /* SCRAM.m */; };
-		29CA97101D887C5E0027D914 /* SCRAM.m in Sources */ = {isa = PBXBuildFile; fileRef = 65368F891CC6CE1600302942 /* SCRAM.m */; };
-		29CA97111D887C740027D914 /* SCRAM.h in Headers */ = {isa = PBXBuildFile; fileRef = 29CA96FA1D8877040027D914 /* SCRAM.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		29CA97121D887C7D0027D914 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 29CA96E01D8876EB0027D914 /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		655E10F61CB64E63008E3057 /* ReArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655E10F51CB64E63008E3057 /* ReArguments.swift */; };
-		65646BAC1D577F6100E58137 /* Rethink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F739EB1BC9505B00B5E62D /* Rethink.swift */; };
-		65646BAD1D577F6100E58137 /* ReConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A115121BD0D3C9007BC661 /* ReConnection.swift */; };
-		65646BAE1D577F6100E58137 /* ReProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A115151BD0D4B8007BC661 /* ReProtocol.swift */; };
-		65646BAF1D577F6100E58137 /* ReDatum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A115241BD2B364007BC661 /* ReDatum.swift */; };
-		65646BB01D577F6100E58137 /* ReArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655E10F51CB64E63008E3057 /* ReArguments.swift */; };
-		65646BB21D577F6100E58137 /* ReSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658278531D4FD78200D36512 /* ReSocket.swift */; };
-		65646BB31D577F6100E58137 /* ReResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658278551D4FD86100D36512 /* ReResponse.swift */; };
-		65646BB41D577F6B00E58137 /* Rethink.h in Headers */ = {isa = PBXBuildFile; fileRef = 65F739D41BC9502400B5E62D /* Rethink.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		658278541D4FD78200D36512 /* ReSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658278531D4FD78200D36512 /* ReSocket.swift */; };
-		658278561D4FD86100D36512 /* ReResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658278551D4FD86100D36512 /* ReResponse.swift */; };
-		65A115131BD0D3C9007BC661 /* ReConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A115121BD0D3C9007BC661 /* ReConnection.swift */; };
-		65A115161BD0D4B8007BC661 /* ReProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A115151BD0D4B8007BC661 /* ReProtocol.swift */; };
-		65A115251BD2B364007BC661 /* ReDatum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A115241BD2B364007BC661 /* ReDatum.swift */; };
-		65F739D51BC9502400B5E62D /* Rethink.h in Headers */ = {isa = PBXBuildFile; fileRef = 65F739D41BC9502400B5E62D /* Rethink.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		65F739DC1BC9502400B5E62D /* Rethink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F739D11BC9502400B5E62D /* Rethink.framework */; };
-		65F739E11BC9502400B5E62D /* RethinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F739E01BC9502400B5E62D /* RethinkTests.swift */; };
-		65F739EC1BC9505B00B5E62D /* Rethink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F739EB1BC9505B00B5E62D /* Rethink.swift */; };
+		OBJ_133 /* Aliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_99 /* Aliases.swift */; };
+		OBJ_134 /* Base64Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_100 /* Base64Encoder.swift */; };
+		OBJ_135 /* Byte+Alphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_101 /* Byte+Alphabet.swift */; };
+		OBJ_136 /* Byte+ControlCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_102 /* Byte+ControlCharacters.swift */; };
+		OBJ_137 /* Byte+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_103 /* Byte+Convenience.swift */; };
+		OBJ_138 /* Byte+PatternMatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_104 /* Byte+PatternMatching.swift */; };
+		OBJ_139 /* Byte+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_105 /* Byte+Random.swift */; };
+		OBJ_140 /* Byte+UTF8Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_106 /* Byte+UTF8Numbers.swift */; };
+		OBJ_141 /* Bytes+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_107 /* Bytes+Base64.swift */; };
+		OBJ_142 /* Bytes+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_108 /* Bytes+Hex.swift */; };
+		OBJ_143 /* Bytes+Percent.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_109 /* Bytes+Percent.swift */; };
+		OBJ_144 /* BytesConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_110 /* BytesConvertible.swift */; };
+		OBJ_145 /* ByteSequence+Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_111 /* ByteSequence+Conversions.swift */; };
+		OBJ_146 /* Data+BytesConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_112 /* Data+BytesConvertible.swift */; };
+		OBJ_147 /* HexEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_113 /* HexEncoder.swift */; };
+		OBJ_148 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_114 /* Operators.swift */; };
+		OBJ_149 /* String+BytesConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_115 /* String+BytesConvertible.swift */; };
+		OBJ_150 /* UnsignedInteger+BytesConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_116 /* UnsignedInteger+BytesConvertible.swift */; };
+		OBJ_151 /* UnsignedInteger+Shifting.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_117 /* UnsignedInteger+Shifting.swift */; };
+		OBJ_158 /* Debuggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_96 /* Debuggable.swift */; };
+		OBJ_165 /* libc.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_69 /* libc.swift */; };
+		OBJ_167 /* Bits.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_119 /* Bits.framework */; };
+		OBJ_168 /* Debugging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_120 /* Debugging.framework */; };
+		OBJ_176 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_71 /* Array.swift */; };
+		OBJ_177 /* Bits.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_72 /* Bits.swift */; };
+		OBJ_178 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* Cache.swift */; };
+		OBJ_179 /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_74 /* Collection+Safe.swift */; };
+		OBJ_180 /* DataFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* DataFile.swift */; };
+		OBJ_181 /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* Dispatch.swift */; };
+		OBJ_182 /* DispatchTime+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* DispatchTime+Utilities.swift */; };
+		OBJ_183 /* EmptyInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_78 /* EmptyInitializable.swift */; };
+		OBJ_184 /* Exports.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* Exports.swift */; };
+		OBJ_185 /* Extendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_80 /* Extendable.swift */; };
+		OBJ_186 /* FileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* FileProtocol.swift */; };
+		OBJ_187 /* Int+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_82 /* Int+Hex.swift */; };
+		OBJ_188 /* Lock.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_83 /* Lock.swift */; };
+		OBJ_189 /* Portal.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_84 /* Portal.swift */; };
+		OBJ_190 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* Result.swift */; };
+		OBJ_191 /* RFC1123.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_86 /* RFC1123.swift */; };
+		OBJ_192 /* Semaphore.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_87 /* Semaphore.swift */; };
+		OBJ_193 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_88 /* Sequence.swift */; };
+		OBJ_194 /* StaticDataBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_89 /* StaticDataBuffer.swift */; };
+		OBJ_195 /* String+CaseInsensitiveCompare.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_90 /* String+CaseInsensitiveCompare.swift */; };
+		OBJ_196 /* String+Polymorphic.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_91 /* String+Polymorphic.swift */; };
+		OBJ_197 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_92 /* String.swift */; };
+		OBJ_198 /* WorkingDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_93 /* WorkingDirectory.swift */; };
+		OBJ_200 /* Bits.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_119 /* Bits.framework */; };
+		OBJ_201 /* Debugging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_120 /* Debugging.framework */; };
+		OBJ_202 /* libc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_121 /* libc.framework */; };
+		OBJ_211 /* Exports.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* Exports.swift */; };
+		OBJ_212 /* Address+C.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* Address+C.swift */; };
+		OBJ_213 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* Address.swift */; };
+		OBJ_214 /* Buffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* Buffer.swift */; };
+		OBJ_215 /* Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* Conversions.swift */; };
+		OBJ_216 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* Error.swift */; };
+		OBJ_217 /* FDSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* FDSet.swift */; };
+		OBJ_218 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* Types.swift */; };
+		OBJ_219 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* Config.swift */; };
+		OBJ_220 /* Descriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* Descriptor.swift */; };
+		OBJ_221 /* InternetSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* InternetSocket.swift */; };
+		OBJ_222 /* Pipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* Pipe.swift */; };
+		OBJ_223 /* RawSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* RawSocket.swift */; };
+		OBJ_224 /* Select.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* Select.swift */; };
+		OBJ_225 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* Socket.swift */; };
+		OBJ_226 /* SocketOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* SocketOptions.swift */; };
+		OBJ_227 /* TCPEstablishedSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* TCPEstablishedSocket.swift */; };
+		OBJ_228 /* TCPInternetSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* TCPInternetSocket.swift */; };
+		OBJ_229 /* TCPReadableSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* TCPReadableSocket.swift */; };
+		OBJ_230 /* TCPSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* TCPSocket.swift */; };
+		OBJ_231 /* TCPWriteableSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* TCPWriteableSocket.swift */; };
+		OBJ_232 /* UDPSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* UDPSocket.swift */; };
+		OBJ_234 /* Bits.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_119 /* Bits.framework */; };
+		OBJ_235 /* Debugging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_120 /* Debugging.framework */; };
+		OBJ_236 /* libc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_121 /* libc.framework */; };
+		OBJ_237 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_122 /* Core.framework */; };
+		OBJ_238 /* Transport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_124 /* Transport.framework */; };
+		OBJ_249 /* Exports.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* Exports.swift */; };
+		OBJ_250 /* ClientStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_57 /* ClientStream.swift */; };
+		OBJ_251 /* InternetStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* InternetStream.swift */; };
+		OBJ_252 /* Port.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* Port.swift */; };
+		OBJ_253 /* ServerStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* ServerStream.swift */; };
+		OBJ_254 /* FoundationStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* FoundationStream.swift */; };
+		OBJ_255 /* ReadableStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* ReadableStream.swift */; };
+		OBJ_256 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* Stream.swift */; };
+		OBJ_257 /* StreamError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* StreamError.swift */; };
+		OBJ_258 /* WriteableStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* WriteableStream.swift */; };
+		OBJ_260 /* Bits.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_119 /* Bits.framework */; };
+		OBJ_261 /* Debugging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_120 /* Debugging.framework */; };
+		OBJ_262 /* libc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_121 /* libc.framework */; };
+		OBJ_263 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_122 /* Core.framework */; };
+		OBJ_273 /* ReArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* ReArguments.swift */; };
+		OBJ_274 /* ReConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* ReConnection.swift */; };
+		OBJ_275 /* ReDatum.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* ReDatum.swift */; };
+		OBJ_276 /* ReProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* ReProtocol.swift */; };
+		OBJ_277 /* ReResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* ReResponse.swift */; };
+		OBJ_278 /* ReSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* ReSocket.swift */; };
+		OBJ_279 /* Rethink.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Rethink.swift */; };
+		OBJ_281 /* Bits.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_119 /* Bits.framework */; };
+		OBJ_282 /* Debugging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_120 /* Debugging.framework */; };
+		OBJ_283 /* libc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_121 /* libc.framework */; };
+		OBJ_284 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_122 /* Core.framework */; };
+		OBJ_285 /* Transport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_124 /* Transport.framework */; };
+		OBJ_286 /* Sockets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_123 /* Sockets.framework */; };
+		OBJ_287 /* SCRAM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_126 /* SCRAM.framework */; };
+		OBJ_301 /* SCRAM.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* SCRAM.m */; };
+		OBJ_303 /* Bits.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_119 /* Bits.framework */; };
+		OBJ_304 /* Debugging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_120 /* Debugging.framework */; };
+		OBJ_305 /* libc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_121 /* libc.framework */; };
+		OBJ_306 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_122 /* Core.framework */; };
+		OBJ_307 /* Transport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_124 /* Transport.framework */; };
+		OBJ_308 /* Sockets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_123 /* Sockets.framework */; };
+		OBJ_320 /* RethinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* RethinkTests.swift */; };
+		OBJ_322 /* Bits.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_119 /* Bits.framework */; };
+		OBJ_323 /* Debugging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_120 /* Debugging.framework */; };
+		OBJ_324 /* libc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_121 /* libc.framework */; };
+		OBJ_325 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_122 /* Core.framework */; };
+		OBJ_326 /* Transport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_124 /* Transport.framework */; };
+		OBJ_327 /* Sockets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_123 /* Sockets.framework */; };
+		OBJ_328 /* SCRAM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_126 /* SCRAM.framework */; };
+		OBJ_329 /* Rethink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_125 /* Rethink.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		29CA971B1D887CCA0027D914 /* PBXContainerItemProxy */ = {
+		7BA7A81C1EF929C000A4F969 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 65F739C81BC9502400B5E62D /* Project object */;
+			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 29CA96DD1D8876EB0027D914;
-			remoteInfo = GCDAsyncSocket;
+			remoteGlobalIDString = OBJ_128;
+			remoteInfo = Bits;
 		};
-		29CA971D1D887CCE0027D914 /* PBXContainerItemProxy */ = {
+		7BA7A81D1EF929C000A4F969 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 65F739C81BC9502400B5E62D /* Project object */;
+			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 29CA96F71D8877040027D914;
+			remoteGlobalIDString = OBJ_153;
+			remoteInfo = Debugging;
+		};
+		7BA7A81E1EF929C000A4F969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_128;
+			remoteInfo = Bits;
+		};
+		7BA7A81F1EF929C000A4F969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_153;
+			remoteInfo = Debugging;
+		};
+		7BA7A8201EF929C000A4F969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_160;
+			remoteInfo = libc;
+		};
+		7BA7A8211EF929C000A4F969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_128;
+			remoteInfo = Bits;
+		};
+		7BA7A8221EF929C000A4F969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_153;
+			remoteInfo = Debugging;
+		};
+		7BA7A8231EF929C000A4F969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_160;
+			remoteInfo = libc;
+		};
+		7BA7A8241EF929C000A4F969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_171;
+			remoteInfo = Core;
+		};
+		7BA7A8251EF929C000A4F969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_244;
+			remoteInfo = Transport;
+		};
+		7BA7A8261EF929C000A4F969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_128;
+			remoteInfo = Bits;
+		};
+		7BA7A8271EF929C000A4F969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_153;
+			remoteInfo = Debugging;
+		};
+		7BA7A8281EF929C000A4F969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_160;
+			remoteInfo = libc;
+		};
+		7BA7A8291EF929C000A4F969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_171;
+			remoteInfo = Core;
+		};
+		7BA7A82A1EF929C000A4F969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_128;
+			remoteInfo = Bits;
+		};
+		7BA7A82B1EF929C000A4F969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_153;
+			remoteInfo = Debugging;
+		};
+		7BA7A82C1EF929C000A4F969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_160;
+			remoteInfo = libc;
+		};
+		7BA7A82D1EF929C000A4F969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_171;
+			remoteInfo = Core;
+		};
+		7BA7A82E1EF929C000A4F969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_244;
+			remoteInfo = Transport;
+		};
+		7BA7A82F1EF929C000A4F969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_206;
+			remoteInfo = Sockets;
+		};
+		7BA7A8301EF929C000A4F969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_295;
 			remoteInfo = SCRAM;
 		};
-		29CA971F1D887CDB0027D914 /* PBXContainerItemProxy */ = {
+		7BA7A8311EF929C000A4F969 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 65F739C81BC9502400B5E62D /* Project object */;
+			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 29CA96EA1D8876F70027D914;
-			remoteInfo = "GCDAsyncSocket iOS";
+			remoteGlobalIDString = OBJ_128;
+			remoteInfo = Bits;
 		};
-		29CA97211D887CDE0027D914 /* PBXContainerItemProxy */ = {
+		7BA7A8321EF929C000A4F969 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 65F739C81BC9502400B5E62D /* Project object */;
+			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 29CA97041D8877100027D914;
-			remoteInfo = "SCRAM iOS";
+			remoteGlobalIDString = OBJ_153;
+			remoteInfo = Debugging;
 		};
-		65F739DD1BC9502400B5E62D /* PBXContainerItemProxy */ = {
+		7BA7A8331EF929C000A4F969 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 65F739C81BC9502400B5E62D /* Project object */;
+			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 65F739D01BC9502400B5E62D;
+			remoteGlobalIDString = OBJ_160;
+			remoteInfo = libc;
+		};
+		7BA7A8341EF929C000A4F969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_171;
+			remoteInfo = Core;
+		};
+		7BA7A8351EF929C000A4F969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_244;
+			remoteInfo = Transport;
+		};
+		7BA7A8361EF929C000A4F969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_206;
+			remoteInfo = Sockets;
+		};
+		7BA7A8371EF929C000A4F969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_128;
+			remoteInfo = Bits;
+		};
+		7BA7A8381EF929C000A4F969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_153;
+			remoteInfo = Debugging;
+		};
+		7BA7A8391EF929C000A4F969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_160;
+			remoteInfo = libc;
+		};
+		7BA7A83A1EF929C000A4F969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_171;
+			remoteInfo = Core;
+		};
+		7BA7A83B1EF929C000A4F969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_244;
+			remoteInfo = Transport;
+		};
+		7BA7A83C1EF929C000A4F969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_206;
+			remoteInfo = Sockets;
+		};
+		7BA7A83D1EF929C000A4F969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_295;
+			remoteInfo = SCRAM;
+		};
+		7BA7A83E1EF929C000A4F969 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_268;
 			remoteInfo = Rethink;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		29CA96DE1D8876EB0027D914 /* GCDAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GCDAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		29CA96E01D8876EB0027D914 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = include/GCDAsyncSocket.h; sourceTree = "<group>"; };
-		29CA96E11D8876EB0027D914 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		29CA96EB1D8876F70027D914 /* GCDAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GCDAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		29CA96F81D8877040027D914 /* SCRAM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SCRAM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		29CA96FA1D8877040027D914 /* SCRAM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SCRAM.h; path = include/SCRAM.h; sourceTree = "<group>"; };
-		29CA96FB1D8877040027D914 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		29CA97051D8877100027D914 /* SCRAM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SCRAM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		29CA97BA1D8883540027D914 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		65368F891CC6CE1600302942 /* SCRAM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCRAM.m; path = Sources/SCRAM/SCRAM.m; sourceTree = SOURCE_ROOT; };
-		655E10F51CB64E63008E3057 /* ReArguments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReArguments.swift; path = Sources/Rethink/ReArguments.swift; sourceTree = SOURCE_ROOT; };
-		65646BA31D577F2F00E58137 /* Rethink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Rethink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		658278531D4FD78200D36512 /* ReSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReSocket.swift; path = Sources/Rethink/ReSocket.swift; sourceTree = SOURCE_ROOT; };
-		658278551D4FD86100D36512 /* ReResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReResponse.swift; path = Sources/Rethink/ReResponse.swift; sourceTree = SOURCE_ROOT; };
-		65A115121BD0D3C9007BC661 /* ReConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReConnection.swift; path = Sources/Rethink/ReConnection.swift; sourceTree = SOURCE_ROOT; };
-		65A115151BD0D4B8007BC661 /* ReProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReProtocol.swift; path = Sources/Rethink/ReProtocol.swift; sourceTree = SOURCE_ROOT; };
-		65A115241BD2B364007BC661 /* ReDatum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReDatum.swift; path = Sources/Rethink/ReDatum.swift; sourceTree = SOURCE_ROOT; };
-		65B3CC441CA1C39C003FC6DF /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = Sources/GCDAsyncSocket/GCDAsyncSocket.m; sourceTree = SOURCE_ROOT; };
-		65F739D11BC9502400B5E62D /* Rethink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Rethink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		65F739D41BC9502400B5E62D /* Rethink.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Rethink.h; path = Sources/Rethink/Rethink.h; sourceTree = SOURCE_ROOT; };
-		65F739D61BC9502400B5E62D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sources/Rethink/Info.plist; sourceTree = SOURCE_ROOT; };
-		65F739DB1BC9502400B5E62D /* RethinkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RethinkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		65F739E01BC9502400B5E62D /* RethinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RethinkTests.swift; path = RethinkTests/RethinkTests.swift; sourceTree = "<group>"; };
-		65F739E21BC9502400B5E62D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = RethinkTests/Info.plist; sourceTree = "<group>"; };
-		65F739EB1BC9505B00B5E62D /* Rethink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rethink.swift; path = Sources/Rethink/Rethink.swift; sourceTree = SOURCE_ROOT; };
-		65F739ED1BCA695F00B5E62D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		OBJ_10 /* ReConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReConnection.swift; sourceTree = "<group>"; };
+		OBJ_100 /* Base64Encoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64Encoder.swift; sourceTree = "<group>"; };
+		OBJ_101 /* Byte+Alphabet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Byte+Alphabet.swift"; sourceTree = "<group>"; };
+		OBJ_102 /* Byte+ControlCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Byte+ControlCharacters.swift"; sourceTree = "<group>"; };
+		OBJ_103 /* Byte+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Byte+Convenience.swift"; sourceTree = "<group>"; };
+		OBJ_104 /* Byte+PatternMatching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Byte+PatternMatching.swift"; sourceTree = "<group>"; };
+		OBJ_105 /* Byte+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Byte+Random.swift"; sourceTree = "<group>"; };
+		OBJ_106 /* Byte+UTF8Numbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Byte+UTF8Numbers.swift"; sourceTree = "<group>"; };
+		OBJ_107 /* Bytes+Base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bytes+Base64.swift"; sourceTree = "<group>"; };
+		OBJ_108 /* Bytes+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bytes+Hex.swift"; sourceTree = "<group>"; };
+		OBJ_109 /* Bytes+Percent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bytes+Percent.swift"; sourceTree = "<group>"; };
+		OBJ_11 /* ReDatum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReDatum.swift; sourceTree = "<group>"; };
+		OBJ_110 /* BytesConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytesConvertible.swift; sourceTree = "<group>"; };
+		OBJ_111 /* ByteSequence+Conversions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ByteSequence+Conversions.swift"; sourceTree = "<group>"; };
+		OBJ_112 /* Data+BytesConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+BytesConvertible.swift"; sourceTree = "<group>"; };
+		OBJ_113 /* HexEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexEncoder.swift; sourceTree = "<group>"; };
+		OBJ_114 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		OBJ_115 /* String+BytesConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+BytesConvertible.swift"; sourceTree = "<group>"; };
+		OBJ_116 /* UnsignedInteger+BytesConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UnsignedInteger+BytesConvertible.swift"; sourceTree = "<group>"; };
+		OBJ_117 /* UnsignedInteger+Shifting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UnsignedInteger+Shifting.swift"; sourceTree = "<group>"; };
+		OBJ_119 /* Bits.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Bits.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_12 /* ReProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReProtocol.swift; sourceTree = "<group>"; };
+		OBJ_120 /* Debugging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Debugging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_121 /* libc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = libc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_122 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_123 /* Sockets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Sockets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_124 /* Transport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Transport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_125 /* Rethink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Rethink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_126 /* SCRAM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SCRAM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_127 /* RethinkTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = RethinkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_13 /* ReResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReResponse.swift; sourceTree = "<group>"; };
+		OBJ_14 /* ReSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReSocket.swift; sourceTree = "<group>"; };
+		OBJ_15 /* Rethink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rethink.swift; sourceTree = "<group>"; };
+		OBJ_17 /* SCRAM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCRAM.m; sourceTree = "<group>"; };
+		OBJ_19 /* SCRAM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCRAM.h; sourceTree = "<group>"; };
+		OBJ_20 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = "/Users/matthijs/Development/rethink-swift/Rethink.xcodeproj/GeneratedModuleMap/SCRAM/module.modulemap"; sourceTree = "<group>"; };
+		OBJ_23 /* RethinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RethinkTests.swift; sourceTree = "<group>"; };
+		OBJ_27 /* Exports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exports.swift; sourceTree = "<group>"; };
+		OBJ_29 /* Address+C.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Address+C.swift"; sourceTree = "<group>"; };
+		OBJ_30 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		OBJ_32 /* Buffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buffer.swift; sourceTree = "<group>"; };
+		OBJ_33 /* Conversions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversions.swift; sourceTree = "<group>"; };
+		OBJ_34 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		OBJ_35 /* FDSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDSet.swift; sourceTree = "<group>"; };
+		OBJ_36 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		OBJ_38 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		OBJ_39 /* Descriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Descriptor.swift; sourceTree = "<group>"; };
+		OBJ_40 /* InternetSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetSocket.swift; sourceTree = "<group>"; };
+		OBJ_41 /* Pipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pipe.swift; sourceTree = "<group>"; };
+		OBJ_42 /* RawSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawSocket.swift; sourceTree = "<group>"; };
+		OBJ_43 /* Select.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Select.swift; sourceTree = "<group>"; };
+		OBJ_44 /* Socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
+		OBJ_45 /* SocketOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketOptions.swift; sourceTree = "<group>"; };
+		OBJ_47 /* TCPEstablishedSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPEstablishedSocket.swift; sourceTree = "<group>"; };
+		OBJ_48 /* TCPInternetSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPInternetSocket.swift; sourceTree = "<group>"; };
+		OBJ_49 /* TCPReadableSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPReadableSocket.swift; sourceTree = "<group>"; };
+		OBJ_50 /* TCPSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPSocket.swift; sourceTree = "<group>"; };
+		OBJ_51 /* TCPWriteableSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPWriteableSocket.swift; sourceTree = "<group>"; };
+		OBJ_53 /* UDPSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDPSocket.swift; sourceTree = "<group>"; };
+		OBJ_55 /* Exports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exports.swift; sourceTree = "<group>"; };
+		OBJ_57 /* ClientStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientStream.swift; sourceTree = "<group>"; };
+		OBJ_58 /* InternetStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetStream.swift; sourceTree = "<group>"; };
+		OBJ_59 /* Port.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Port.swift; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_60 /* ServerStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerStream.swift; sourceTree = "<group>"; };
+		OBJ_62 /* FoundationStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationStream.swift; sourceTree = "<group>"; };
+		OBJ_63 /* ReadableStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadableStream.swift; sourceTree = "<group>"; };
+		OBJ_64 /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
+		OBJ_65 /* StreamError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamError.swift; sourceTree = "<group>"; };
+		OBJ_66 /* WriteableStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteableStream.swift; sourceTree = "<group>"; };
+		OBJ_69 /* libc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = libc.swift; sourceTree = "<group>"; };
+		OBJ_71 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		OBJ_72 /* Bits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bits.swift; sourceTree = "<group>"; };
+		OBJ_73 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		OBJ_74 /* Collection+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Safe.swift"; sourceTree = "<group>"; };
+		OBJ_75 /* DataFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFile.swift; sourceTree = "<group>"; };
+		OBJ_76 /* Dispatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
+		OBJ_77 /* DispatchTime+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchTime+Utilities.swift"; sourceTree = "<group>"; };
+		OBJ_78 /* EmptyInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyInitializable.swift; sourceTree = "<group>"; };
+		OBJ_79 /* Exports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exports.swift; sourceTree = "<group>"; };
+		OBJ_80 /* Extendable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extendable.swift; sourceTree = "<group>"; };
+		OBJ_81 /* FileProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileProtocol.swift; sourceTree = "<group>"; };
+		OBJ_82 /* Int+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Hex.swift"; sourceTree = "<group>"; };
+		OBJ_83 /* Lock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lock.swift; sourceTree = "<group>"; };
+		OBJ_84 /* Portal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Portal.swift; sourceTree = "<group>"; };
+		OBJ_85 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		OBJ_86 /* RFC1123.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RFC1123.swift; sourceTree = "<group>"; };
+		OBJ_87 /* Semaphore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Semaphore.swift; sourceTree = "<group>"; };
+		OBJ_88 /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
+		OBJ_89 /* StaticDataBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticDataBuffer.swift; sourceTree = "<group>"; };
+		OBJ_9 /* ReArguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReArguments.swift; sourceTree = "<group>"; };
+		OBJ_90 /* String+CaseInsensitiveCompare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+CaseInsensitiveCompare.swift"; sourceTree = "<group>"; };
+		OBJ_91 /* String+Polymorphic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Polymorphic.swift"; sourceTree = "<group>"; };
+		OBJ_92 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		OBJ_93 /* WorkingDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingDirectory.swift; sourceTree = "<group>"; };
+		OBJ_96 /* Debuggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debuggable.swift; sourceTree = "<group>"; };
+		OBJ_99 /* Aliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aliases.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		29CA96DA1D8876EB0027D914 /* Frameworks */ = {
+		OBJ_152 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		29CA96E71D8876F70027D914 /* Frameworks */ = {
+		OBJ_159 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		29CA96F41D8877040027D914 /* Frameworks */ = {
+		OBJ_166 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
+				OBJ_167 /* Bits.framework in Frameworks */,
+				OBJ_168 /* Debugging.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		29CA97011D8877100027D914 /* Frameworks */ = {
+		OBJ_199 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
+				OBJ_200 /* Bits.framework in Frameworks */,
+				OBJ_201 /* Debugging.framework in Frameworks */,
+				OBJ_202 /* libc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		65646B9F1D577F2F00E58137 /* Frameworks */ = {
+		OBJ_233 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
+				OBJ_234 /* Bits.framework in Frameworks */,
+				OBJ_235 /* Debugging.framework in Frameworks */,
+				OBJ_236 /* libc.framework in Frameworks */,
+				OBJ_237 /* Core.framework in Frameworks */,
+				OBJ_238 /* Transport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		65F739CD1BC9502400B5E62D /* Frameworks */ = {
+		OBJ_259 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
+				OBJ_260 /* Bits.framework in Frameworks */,
+				OBJ_261 /* Debugging.framework in Frameworks */,
+				OBJ_262 /* libc.framework in Frameworks */,
+				OBJ_263 /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		65F739D81BC9502400B5E62D /* Frameworks */ = {
+		OBJ_280 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				65F739DC1BC9502400B5E62D /* Rethink.framework in Frameworks */,
+				OBJ_281 /* Bits.framework in Frameworks */,
+				OBJ_282 /* Debugging.framework in Frameworks */,
+				OBJ_283 /* libc.framework in Frameworks */,
+				OBJ_284 /* Core.framework in Frameworks */,
+				OBJ_285 /* Transport.framework in Frameworks */,
+				OBJ_286 /* Sockets.framework in Frameworks */,
+				OBJ_287 /* SCRAM.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_302 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_303 /* Bits.framework in Frameworks */,
+				OBJ_304 /* Debugging.framework in Frameworks */,
+				OBJ_305 /* libc.framework in Frameworks */,
+				OBJ_306 /* Core.framework in Frameworks */,
+				OBJ_307 /* Transport.framework in Frameworks */,
+				OBJ_308 /* Sockets.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_321 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_322 /* Bits.framework in Frameworks */,
+				OBJ_323 /* Debugging.framework in Frameworks */,
+				OBJ_324 /* libc.framework in Frameworks */,
+				OBJ_325 /* Core.framework in Frameworks */,
+				OBJ_326 /* Transport.framework in Frameworks */,
+				OBJ_327 /* Sockets.framework in Frameworks */,
+				OBJ_328 /* SCRAM.framework in Frameworks */,
+				OBJ_329 /* Rethink.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		29CA96DF1D8876EB0027D914 /* GCDAsyncSocket */ = {
+		OBJ_118 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				29CA96E01D8876EB0027D914 /* GCDAsyncSocket.h */,
-				65B3CC441CA1C39C003FC6DF /* GCDAsyncSocket.m */,
-				29CA96E11D8876EB0027D914 /* Info.plist */,
+				OBJ_119 /* Bits.framework */,
+				OBJ_120 /* Debugging.framework */,
+				OBJ_121 /* libc.framework */,
+				OBJ_122 /* Core.framework */,
+				OBJ_123 /* Sockets.framework */,
+				OBJ_124 /* Transport.framework */,
+				OBJ_125 /* Rethink.framework */,
+				OBJ_126 /* SCRAM.framework */,
+				OBJ_127 /* RethinkTests.xctest */,
 			);
-			name = GCDAsyncSocket;
-			path = Sources/GCDAsyncSocket;
-			sourceTree = "<group>";
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		29CA96F91D8877040027D914 /* SCRAM */ = {
+		OBJ_16 /* SCRAM */ = {
 			isa = PBXGroup;
 			children = (
-				29CA96FA1D8877040027D914 /* SCRAM.h */,
-				65368F891CC6CE1600302942 /* SCRAM.m */,
-				29CA96FB1D8877040027D914 /* Info.plist */,
+				OBJ_17 /* SCRAM.m */,
+				OBJ_18 /* include */,
 			);
 			name = SCRAM;
 			path = Sources/SCRAM;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
-		65F739C71BC9502400B5E62D = {
+		OBJ_18 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				29CA97BA1D8883540027D914 /* Package.swift */,
-				65F739ED1BCA695F00B5E62D /* README.md */,
-				65F739D31BC9502400B5E62D /* Rethink */,
-				29CA96DF1D8876EB0027D914 /* GCDAsyncSocket */,
-				29CA96F91D8877040027D914 /* SCRAM */,
-				65F739DF1BC9502400B5E62D /* RethinkTests */,
-				65F739D21BC9502400B5E62D /* Products */,
+				OBJ_19 /* SCRAM.h */,
+				OBJ_20 /* module.modulemap */,
 			);
+			path = include;
 			sourceTree = "<group>";
 		};
-		65F739D21BC9502400B5E62D /* Products */ = {
+		OBJ_21 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				65F739D11BC9502400B5E62D /* Rethink.framework */,
-				65F739DB1BC9502400B5E62D /* RethinkTests.xctest */,
-				65646BA31D577F2F00E58137 /* Rethink.framework */,
-				29CA96DE1D8876EB0027D914 /* GCDAsyncSocket.framework */,
-				29CA96EB1D8876F70027D914 /* GCDAsyncSocket.framework */,
-				29CA96F81D8877040027D914 /* SCRAM.framework */,
-				29CA97051D8877100027D914 /* SCRAM.framework */,
+				OBJ_22 /* RethinkTests */,
 			);
-			name = Products;
-			sourceTree = "<group>";
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
 		};
-		65F739D31BC9502400B5E62D /* Rethink */ = {
+		OBJ_22 /* RethinkTests */ = {
 			isa = PBXGroup;
 			children = (
-				65F739D41BC9502400B5E62D /* Rethink.h */,
-				65F739EB1BC9505B00B5E62D /* Rethink.swift */,
-				65A115121BD0D3C9007BC661 /* ReConnection.swift */,
-				65A115151BD0D4B8007BC661 /* ReProtocol.swift */,
-				65A115241BD2B364007BC661 /* ReDatum.swift */,
-				655E10F51CB64E63008E3057 /* ReArguments.swift */,
-				658278531D4FD78200D36512 /* ReSocket.swift */,
-				658278551D4FD86100D36512 /* ReResponse.swift */,
-				65F739D61BC9502400B5E62D /* Info.plist */,
-			);
-			path = Rethink;
-			sourceTree = "<group>";
-		};
-		65F739DF1BC9502400B5E62D /* RethinkTests */ = {
-			isa = PBXGroup;
-			children = (
-				65F739E01BC9502400B5E62D /* RethinkTests.swift */,
-				65F739E21BC9502400B5E62D /* Info.plist */,
+				OBJ_23 /* RethinkTests.swift */,
 			);
 			name = RethinkTests;
-			path = Tests;
+			path = Tests/RethinkTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_24 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_25 /* Sockets 2.0.1 */,
+				OBJ_67 /* Core 2.0.2 */,
+				OBJ_94 /* Debugging 1.0.0 */,
+				OBJ_97 /* Bits 1.0.0 */,
+			);
+			name = Dependencies;
 			sourceTree = "<group>";
+		};
+		OBJ_25 /* Sockets 2.0.1 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_26 /* Sockets */,
+				OBJ_54 /* Transport */,
+			);
+			name = "Sockets 2.0.1";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_26 /* Sockets */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_27 /* Exports.swift */,
+				OBJ_28 /* Address */,
+				OBJ_31 /* Core */,
+				OBJ_37 /* Socket */,
+				OBJ_46 /* TCP */,
+				OBJ_52 /* UDP */,
+			);
+			name = Sockets;
+			path = ".build/checkouts/sockets.git-972942978533733666/Sources/Sockets";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_28 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_29 /* Address+C.swift */,
+				OBJ_30 /* Address.swift */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
+		OBJ_31 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_32 /* Buffer.swift */,
+				OBJ_33 /* Conversions.swift */,
+				OBJ_34 /* Error.swift */,
+				OBJ_35 /* FDSet.swift */,
+				OBJ_36 /* Types.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		OBJ_37 /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_38 /* Config.swift */,
+				OBJ_39 /* Descriptor.swift */,
+				OBJ_40 /* InternetSocket.swift */,
+				OBJ_41 /* Pipe.swift */,
+				OBJ_42 /* RawSocket.swift */,
+				OBJ_43 /* Select.swift */,
+				OBJ_44 /* Socket.swift */,
+				OBJ_45 /* SocketOptions.swift */,
+			);
+			path = Socket;
+			sourceTree = "<group>";
+		};
+		OBJ_46 /* TCP */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_47 /* TCPEstablishedSocket.swift */,
+				OBJ_48 /* TCPInternetSocket.swift */,
+				OBJ_49 /* TCPReadableSocket.swift */,
+				OBJ_50 /* TCPSocket.swift */,
+				OBJ_51 /* TCPWriteableSocket.swift */,
+			);
+			path = TCP;
+			sourceTree = "<group>";
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_21 /* Tests */,
+				OBJ_24 /* Dependencies */,
+				OBJ_118 /* Products */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_52 /* UDP */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_53 /* UDPSocket.swift */,
+			);
+			path = UDP;
+			sourceTree = "<group>";
+		};
+		OBJ_54 /* Transport */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_55 /* Exports.swift */,
+				OBJ_56 /* Internet */,
+				OBJ_61 /* Streams */,
+			);
+			name = Transport;
+			path = ".build/checkouts/sockets.git-972942978533733666/Sources/Transport";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_56 /* Internet */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_57 /* ClientStream.swift */,
+				OBJ_58 /* InternetStream.swift */,
+				OBJ_59 /* Port.swift */,
+				OBJ_60 /* ServerStream.swift */,
+			);
+			path = Internet;
+			sourceTree = "<group>";
+		};
+		OBJ_61 /* Streams */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_62 /* FoundationStream.swift */,
+				OBJ_63 /* ReadableStream.swift */,
+				OBJ_64 /* Stream.swift */,
+				OBJ_65 /* StreamError.swift */,
+				OBJ_66 /* WriteableStream.swift */,
+			);
+			path = Streams;
+			sourceTree = "<group>";
+		};
+		OBJ_67 /* Core 2.0.2 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_68 /* libc */,
+				OBJ_70 /* Core */,
+			);
+			name = "Core 2.0.2";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_68 /* libc */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_69 /* libc.swift */,
+			);
+			name = libc;
+			path = ".build/checkouts/core.git-9210800844849382486/Sources/libc";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* Rethink */,
+				OBJ_16 /* SCRAM */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_70 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_71 /* Array.swift */,
+				OBJ_72 /* Bits.swift */,
+				OBJ_73 /* Cache.swift */,
+				OBJ_74 /* Collection+Safe.swift */,
+				OBJ_75 /* DataFile.swift */,
+				OBJ_76 /* Dispatch.swift */,
+				OBJ_77 /* DispatchTime+Utilities.swift */,
+				OBJ_78 /* EmptyInitializable.swift */,
+				OBJ_79 /* Exports.swift */,
+				OBJ_80 /* Extendable.swift */,
+				OBJ_81 /* FileProtocol.swift */,
+				OBJ_82 /* Int+Hex.swift */,
+				OBJ_83 /* Lock.swift */,
+				OBJ_84 /* Portal.swift */,
+				OBJ_85 /* Result.swift */,
+				OBJ_86 /* RFC1123.swift */,
+				OBJ_87 /* Semaphore.swift */,
+				OBJ_88 /* Sequence.swift */,
+				OBJ_89 /* StaticDataBuffer.swift */,
+				OBJ_90 /* String+CaseInsensitiveCompare.swift */,
+				OBJ_91 /* String+Polymorphic.swift */,
+				OBJ_92 /* String.swift */,
+				OBJ_93 /* WorkingDirectory.swift */,
+			);
+			name = Core;
+			path = ".build/checkouts/core.git-9210800844849382486/Sources/Core";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* Rethink */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* ReArguments.swift */,
+				OBJ_10 /* ReConnection.swift */,
+				OBJ_11 /* ReDatum.swift */,
+				OBJ_12 /* ReProtocol.swift */,
+				OBJ_13 /* ReResponse.swift */,
+				OBJ_14 /* ReSocket.swift */,
+				OBJ_15 /* Rethink.swift */,
+			);
+			name = Rethink;
+			path = Sources/Rethink;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_94 /* Debugging 1.0.0 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_95 /* Debugging */,
+			);
+			name = "Debugging 1.0.0";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_95 /* Debugging */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_96 /* Debuggable.swift */,
+			);
+			name = Debugging;
+			path = ".build/checkouts/debugging.git-4365319567167379684/Sources/Debugging";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_97 /* Bits 1.0.0 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_98 /* Bits */,
+			);
+			name = "Bits 1.0.0";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_98 /* Bits */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_99 /* Aliases.swift */,
+				OBJ_100 /* Base64Encoder.swift */,
+				OBJ_101 /* Byte+Alphabet.swift */,
+				OBJ_102 /* Byte+ControlCharacters.swift */,
+				OBJ_103 /* Byte+Convenience.swift */,
+				OBJ_104 /* Byte+PatternMatching.swift */,
+				OBJ_105 /* Byte+Random.swift */,
+				OBJ_106 /* Byte+UTF8Numbers.swift */,
+				OBJ_107 /* Bytes+Base64.swift */,
+				OBJ_108 /* Bytes+Hex.swift */,
+				OBJ_109 /* Bytes+Percent.swift */,
+				OBJ_110 /* BytesConvertible.swift */,
+				OBJ_111 /* ByteSequence+Conversions.swift */,
+				OBJ_112 /* Data+BytesConvertible.swift */,
+				OBJ_113 /* HexEncoder.swift */,
+				OBJ_114 /* Operators.swift */,
+				OBJ_115 /* String+BytesConvertible.swift */,
+				OBJ_116 /* UnsignedInteger+BytesConvertible.swift */,
+				OBJ_117 /* UnsignedInteger+Shifting.swift */,
+			);
+			name = Bits;
+			path = ".build/checkouts/bits.git-9196587591774126515/Sources/Bits";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		29CA96DB1D8876EB0027D914 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				29CA96E21D8876EB0027D914 /* GCDAsyncSocket.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		29CA96E81D8876F70027D914 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				29CA97121D887C7D0027D914 /* GCDAsyncSocket.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		29CA96F51D8877040027D914 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				29CA96FC1D8877040027D914 /* SCRAM.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		29CA97021D8877100027D914 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				29CA97111D887C740027D914 /* SCRAM.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		65646BA01D577F2F00E58137 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				65646BB41D577F6B00E58137 /* Rethink.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		65F739CE1BC9502400B5E62D /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				65F739D51BC9502400B5E62D /* Rethink.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		29CA96DD1D8876EB0027D914 /* GCDAsyncSocket */ = {
+		OBJ_128 /* Bits */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 29CA96E51D8876EB0027D914 /* Build configuration list for PBXNativeTarget "GCDAsyncSocket" */;
+			buildConfigurationList = OBJ_129 /* Build configuration list for PBXNativeTarget "Bits" */;
 			buildPhases = (
-				29CA96D91D8876EB0027D914 /* Sources */,
-				29CA96DA1D8876EB0027D914 /* Frameworks */,
-				29CA96DB1D8876EB0027D914 /* Headers */,
-				29CA96DC1D8876EB0027D914 /* Resources */,
+				OBJ_132 /* Sources */,
+				OBJ_152 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = GCDAsyncSocket;
-			productName = GCDAsyncSocket;
-			productReference = 29CA96DE1D8876EB0027D914 /* GCDAsyncSocket.framework */;
+			name = Bits;
+			productName = Bits;
+			productReference = OBJ_119 /* Bits.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		29CA96EA1D8876F70027D914 /* GCDAsyncSocket iOS */ = {
+		OBJ_153 /* Debugging */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 29CA96F01D8876F70027D914 /* Build configuration list for PBXNativeTarget "GCDAsyncSocket iOS" */;
+			buildConfigurationList = OBJ_154 /* Build configuration list for PBXNativeTarget "Debugging" */;
 			buildPhases = (
-				29CA96E61D8876F70027D914 /* Sources */,
-				29CA96E71D8876F70027D914 /* Frameworks */,
-				29CA96E81D8876F70027D914 /* Headers */,
-				29CA96E91D8876F70027D914 /* Resources */,
+				OBJ_157 /* Sources */,
+				OBJ_159 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "GCDAsyncSocket iOS";
-			productName = "GCDAsyncSocket iOS";
-			productReference = 29CA96EB1D8876F70027D914 /* GCDAsyncSocket.framework */;
+			name = Debugging;
+			productName = Debugging;
+			productReference = OBJ_120 /* Debugging.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		29CA96F71D8877040027D914 /* SCRAM */ = {
+		OBJ_160 /* libc */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 29CA96FD1D8877040027D914 /* Build configuration list for PBXNativeTarget "SCRAM" */;
+			buildConfigurationList = OBJ_161 /* Build configuration list for PBXNativeTarget "libc" */;
 			buildPhases = (
-				29CA96F31D8877040027D914 /* Sources */,
-				29CA96F41D8877040027D914 /* Frameworks */,
-				29CA96F51D8877040027D914 /* Headers */,
-				29CA96F61D8877040027D914 /* Resources */,
+				OBJ_164 /* Sources */,
+				OBJ_166 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				OBJ_169 /* PBXTargetDependency */,
+				OBJ_170 /* PBXTargetDependency */,
 			);
-			name = SCRAM;
-			productName = SCRAM;
-			productReference = 29CA96F81D8877040027D914 /* SCRAM.framework */;
+			name = libc;
+			productName = libc;
+			productReference = OBJ_121 /* libc.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		29CA97041D8877100027D914 /* SCRAM iOS */ = {
+		OBJ_171 /* Core */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 29CA970A1D8877100027D914 /* Build configuration list for PBXNativeTarget "SCRAM iOS" */;
+			buildConfigurationList = OBJ_172 /* Build configuration list for PBXNativeTarget "Core" */;
 			buildPhases = (
-				29CA97001D8877100027D914 /* Sources */,
-				29CA97011D8877100027D914 /* Frameworks */,
-				29CA97021D8877100027D914 /* Headers */,
-				29CA97031D8877100027D914 /* Resources */,
+				OBJ_175 /* Sources */,
+				OBJ_199 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				OBJ_203 /* PBXTargetDependency */,
+				OBJ_204 /* PBXTargetDependency */,
+				OBJ_205 /* PBXTargetDependency */,
 			);
-			name = "SCRAM iOS";
-			productName = "SCRAM iOS";
-			productReference = 29CA97051D8877100027D914 /* SCRAM.framework */;
+			name = Core;
+			productName = Core;
+			productReference = OBJ_122 /* Core.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		65646BA21D577F2F00E58137 /* Rethink iOS */ = {
+		OBJ_206 /* Sockets */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 65646BAA1D577F3000E58137 /* Build configuration list for PBXNativeTarget "Rethink iOS" */;
+			buildConfigurationList = OBJ_207 /* Build configuration list for PBXNativeTarget "Sockets" */;
 			buildPhases = (
-				65646B9E1D577F2F00E58137 /* Sources */,
-				65646B9F1D577F2F00E58137 /* Frameworks */,
-				65646BA01D577F2F00E58137 /* Headers */,
-				65646BA11D577F2F00E58137 /* Resources */,
+				OBJ_210 /* Sources */,
+				OBJ_233 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				29CA97201D887CDB0027D914 /* PBXTargetDependency */,
-				29CA97221D887CDE0027D914 /* PBXTargetDependency */,
+				OBJ_239 /* PBXTargetDependency */,
+				OBJ_240 /* PBXTargetDependency */,
+				OBJ_241 /* PBXTargetDependency */,
+				OBJ_242 /* PBXTargetDependency */,
+				OBJ_243 /* PBXTargetDependency */,
 			);
-			name = "Rethink iOS";
-			productName = "Rethink iOS";
-			productReference = 65646BA31D577F2F00E58137 /* Rethink.framework */;
+			name = Sockets;
+			productName = Sockets;
+			productReference = OBJ_123 /* Sockets.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		65F739D01BC9502400B5E62D /* Rethink */ = {
+		OBJ_244 /* Transport */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 65F739E51BC9502400B5E62D /* Build configuration list for PBXNativeTarget "Rethink" */;
+			buildConfigurationList = OBJ_245 /* Build configuration list for PBXNativeTarget "Transport" */;
 			buildPhases = (
-				65F739CC1BC9502400B5E62D /* Sources */,
-				65F739CD1BC9502400B5E62D /* Frameworks */,
-				65F739CE1BC9502400B5E62D /* Headers */,
-				65F739CF1BC9502400B5E62D /* Resources */,
+				OBJ_248 /* Sources */,
+				OBJ_259 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				29CA971C1D887CCA0027D914 /* PBXTargetDependency */,
-				29CA971E1D887CCE0027D914 /* PBXTargetDependency */,
+				OBJ_264 /* PBXTargetDependency */,
+				OBJ_265 /* PBXTargetDependency */,
+				OBJ_266 /* PBXTargetDependency */,
+				OBJ_267 /* PBXTargetDependency */,
+			);
+			name = Transport;
+			productName = Transport;
+			productReference = OBJ_124 /* Transport.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		OBJ_268 /* Rethink */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_269 /* Build configuration list for PBXNativeTarget "Rethink" */;
+			buildPhases = (
+				OBJ_272 /* Sources */,
+				OBJ_280 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_288 /* PBXTargetDependency */,
+				OBJ_289 /* PBXTargetDependency */,
+				OBJ_290 /* PBXTargetDependency */,
+				OBJ_291 /* PBXTargetDependency */,
+				OBJ_292 /* PBXTargetDependency */,
+				OBJ_293 /* PBXTargetDependency */,
+				OBJ_294 /* PBXTargetDependency */,
 			);
 			name = Rethink;
 			productName = Rethink;
-			productReference = 65F739D11BC9502400B5E62D /* Rethink.framework */;
+			productReference = OBJ_125 /* Rethink.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		65F739DA1BC9502400B5E62D /* RethinkTests */ = {
+		OBJ_295 /* SCRAM */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 65F739E81BC9502400B5E62D /* Build configuration list for PBXNativeTarget "RethinkTests" */;
+			buildConfigurationList = OBJ_296 /* Build configuration list for PBXNativeTarget "SCRAM" */;
 			buildPhases = (
-				65F739D71BC9502400B5E62D /* Sources */,
-				65F739D81BC9502400B5E62D /* Frameworks */,
-				65F739D91BC9502400B5E62D /* Resources */,
+				OBJ_299 /* ShellScript */,
+				OBJ_300 /* Sources */,
+				OBJ_302 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				65F739DE1BC9502400B5E62D /* PBXTargetDependency */,
+				OBJ_309 /* PBXTargetDependency */,
+				OBJ_310 /* PBXTargetDependency */,
+				OBJ_311 /* PBXTargetDependency */,
+				OBJ_312 /* PBXTargetDependency */,
+				OBJ_313 /* PBXTargetDependency */,
+				OBJ_314 /* PBXTargetDependency */,
+			);
+			name = SCRAM;
+			productName = SCRAM;
+			productReference = OBJ_126 /* SCRAM.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		OBJ_315 /* RethinkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_316 /* Build configuration list for PBXNativeTarget "RethinkTests" */;
+			buildPhases = (
+				OBJ_319 /* Sources */,
+				OBJ_321 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_330 /* PBXTargetDependency */,
+				OBJ_331 /* PBXTargetDependency */,
+				OBJ_332 /* PBXTargetDependency */,
+				OBJ_333 /* PBXTargetDependency */,
+				OBJ_334 /* PBXTargetDependency */,
+				OBJ_335 /* PBXTargetDependency */,
+				OBJ_336 /* PBXTargetDependency */,
+				OBJ_337 /* PBXTargetDependency */,
 			);
 			name = RethinkTests;
 			productName = RethinkTests;
-			productReference = 65F739DB1BC9502400B5E62D /* RethinkTests.xctest */;
+			productReference = OBJ_127 /* RethinkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		65F739C81BC9502400B5E62D /* Project object */ = {
+		OBJ_1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0820;
-				ORGANIZATIONNAME = Pixelspark;
-				TargetAttributes = {
-					29CA96DD1D8876EB0027D914 = {
-						CreatedOnToolsVersion = 8.0;
-						ProvisioningStyle = Automatic;
-					};
-					29CA96EA1D8876F70027D914 = {
-						CreatedOnToolsVersion = 8.0;
-						ProvisioningStyle = Automatic;
-					};
-					29CA96F71D8877040027D914 = {
-						CreatedOnToolsVersion = 8.0;
-						ProvisioningStyle = Automatic;
-					};
-					29CA97041D8877100027D914 = {
-						CreatedOnToolsVersion = 8.0;
-						ProvisioningStyle = Automatic;
-					};
-					65646BA21D577F2F00E58137 = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 2T2T7HAA8S;
-						ProvisioningStyle = Automatic;
-					};
-					65F739D01BC9502400B5E62D = {
-						CreatedOnToolsVersion = 7.0.1;
-						LastSwiftMigration = 0800;
-					};
-					65F739DA1BC9502400B5E62D = {
-						CreatedOnToolsVersion = 7.0.1;
-						LastSwiftMigration = 0800;
-					};
-				};
+				LastUpgradeCheck = 9999;
 			};
-			buildConfigurationList = 65F739CB1BC9502400B5E62D /* Build configuration list for PBXProject "Rethink" */;
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "Rethink" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 65F739C71BC9502400B5E62D;
-			productRefGroup = 65F739D21BC9502400B5E62D /* Products */;
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_118 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				65F739D01BC9502400B5E62D /* Rethink */,
-				65646BA21D577F2F00E58137 /* Rethink iOS */,
-				65F739DA1BC9502400B5E62D /* RethinkTests */,
-				29CA96DD1D8876EB0027D914 /* GCDAsyncSocket */,
-				29CA96EA1D8876F70027D914 /* GCDAsyncSocket iOS */,
-				29CA96F71D8877040027D914 /* SCRAM */,
-				29CA97041D8877100027D914 /* SCRAM iOS */,
+				OBJ_128 /* Bits */,
+				OBJ_153 /* Debugging */,
+				OBJ_160 /* libc */,
+				OBJ_171 /* Core */,
+				OBJ_206 /* Sockets */,
+				OBJ_244 /* Transport */,
+				OBJ_268 /* Rethink */,
+				OBJ_295 /* SCRAM */,
+				OBJ_315 /* RethinkTests */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		29CA96DC1D8876EB0027D914 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
+/* Begin PBXShellScriptBuildPhase section */
+		OBJ_299 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir -p \"${PROJECT_TEMP_DIR}/SymlinkLibs\"\nln -sf \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${PROJECT_TEMP_DIR}/SymlinkLibs/lib${EXECUTABLE_NAME}.dylib\"\n";
 		};
-		29CA96E91D8876F70027D914 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		29CA96F61D8877040027D914 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		29CA97031D8877100027D914 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		65646BA11D577F2F00E58137 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		65F739CF1BC9502400B5E62D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		65F739D91BC9502400B5E62D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		29CA96D91D8876EB0027D914 /* Sources */ = {
+		OBJ_132 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				29CA970D1D887C460027D914 /* GCDAsyncSocket.m in Sources */,
+				OBJ_133 /* Aliases.swift in Sources */,
+				OBJ_134 /* Base64Encoder.swift in Sources */,
+				OBJ_135 /* Byte+Alphabet.swift in Sources */,
+				OBJ_136 /* Byte+ControlCharacters.swift in Sources */,
+				OBJ_137 /* Byte+Convenience.swift in Sources */,
+				OBJ_138 /* Byte+PatternMatching.swift in Sources */,
+				OBJ_139 /* Byte+Random.swift in Sources */,
+				OBJ_140 /* Byte+UTF8Numbers.swift in Sources */,
+				OBJ_141 /* Bytes+Base64.swift in Sources */,
+				OBJ_142 /* Bytes+Hex.swift in Sources */,
+				OBJ_143 /* Bytes+Percent.swift in Sources */,
+				OBJ_144 /* BytesConvertible.swift in Sources */,
+				OBJ_145 /* ByteSequence+Conversions.swift in Sources */,
+				OBJ_146 /* Data+BytesConvertible.swift in Sources */,
+				OBJ_147 /* HexEncoder.swift in Sources */,
+				OBJ_148 /* Operators.swift in Sources */,
+				OBJ_149 /* String+BytesConvertible.swift in Sources */,
+				OBJ_150 /* UnsignedInteger+BytesConvertible.swift in Sources */,
+				OBJ_151 /* UnsignedInteger+Shifting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		29CA96E61D8876F70027D914 /* Sources */ = {
+		OBJ_157 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				29CA970E1D887C480027D914 /* GCDAsyncSocket.m in Sources */,
+				OBJ_158 /* Debuggable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		29CA96F31D8877040027D914 /* Sources */ = {
+		OBJ_164 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				29CA970F1D887C5D0027D914 /* SCRAM.m in Sources */,
+				OBJ_165 /* libc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		29CA97001D8877100027D914 /* Sources */ = {
+		OBJ_175 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				29CA97101D887C5E0027D914 /* SCRAM.m in Sources */,
+				OBJ_176 /* Array.swift in Sources */,
+				OBJ_177 /* Bits.swift in Sources */,
+				OBJ_178 /* Cache.swift in Sources */,
+				OBJ_179 /* Collection+Safe.swift in Sources */,
+				OBJ_180 /* DataFile.swift in Sources */,
+				OBJ_181 /* Dispatch.swift in Sources */,
+				OBJ_182 /* DispatchTime+Utilities.swift in Sources */,
+				OBJ_183 /* EmptyInitializable.swift in Sources */,
+				OBJ_184 /* Exports.swift in Sources */,
+				OBJ_185 /* Extendable.swift in Sources */,
+				OBJ_186 /* FileProtocol.swift in Sources */,
+				OBJ_187 /* Int+Hex.swift in Sources */,
+				OBJ_188 /* Lock.swift in Sources */,
+				OBJ_189 /* Portal.swift in Sources */,
+				OBJ_190 /* Result.swift in Sources */,
+				OBJ_191 /* RFC1123.swift in Sources */,
+				OBJ_192 /* Semaphore.swift in Sources */,
+				OBJ_193 /* Sequence.swift in Sources */,
+				OBJ_194 /* StaticDataBuffer.swift in Sources */,
+				OBJ_195 /* String+CaseInsensitiveCompare.swift in Sources */,
+				OBJ_196 /* String+Polymorphic.swift in Sources */,
+				OBJ_197 /* String.swift in Sources */,
+				OBJ_198 /* WorkingDirectory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		65646B9E1D577F2F00E58137 /* Sources */ = {
+		OBJ_210 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				65646BAC1D577F6100E58137 /* Rethink.swift in Sources */,
-				65646BAD1D577F6100E58137 /* ReConnection.swift in Sources */,
-				65646BAE1D577F6100E58137 /* ReProtocol.swift in Sources */,
-				65646BAF1D577F6100E58137 /* ReDatum.swift in Sources */,
-				65646BB01D577F6100E58137 /* ReArguments.swift in Sources */,
-				65646BB21D577F6100E58137 /* ReSocket.swift in Sources */,
-				65646BB31D577F6100E58137 /* ReResponse.swift in Sources */,
+				OBJ_211 /* Exports.swift in Sources */,
+				OBJ_212 /* Address+C.swift in Sources */,
+				OBJ_213 /* Address.swift in Sources */,
+				OBJ_214 /* Buffer.swift in Sources */,
+				OBJ_215 /* Conversions.swift in Sources */,
+				OBJ_216 /* Error.swift in Sources */,
+				OBJ_217 /* FDSet.swift in Sources */,
+				OBJ_218 /* Types.swift in Sources */,
+				OBJ_219 /* Config.swift in Sources */,
+				OBJ_220 /* Descriptor.swift in Sources */,
+				OBJ_221 /* InternetSocket.swift in Sources */,
+				OBJ_222 /* Pipe.swift in Sources */,
+				OBJ_223 /* RawSocket.swift in Sources */,
+				OBJ_224 /* Select.swift in Sources */,
+				OBJ_225 /* Socket.swift in Sources */,
+				OBJ_226 /* SocketOptions.swift in Sources */,
+				OBJ_227 /* TCPEstablishedSocket.swift in Sources */,
+				OBJ_228 /* TCPInternetSocket.swift in Sources */,
+				OBJ_229 /* TCPReadableSocket.swift in Sources */,
+				OBJ_230 /* TCPSocket.swift in Sources */,
+				OBJ_231 /* TCPWriteableSocket.swift in Sources */,
+				OBJ_232 /* UDPSocket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		65F739CC1BC9502400B5E62D /* Sources */ = {
+		OBJ_248 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				65A115131BD0D3C9007BC661 /* ReConnection.swift in Sources */,
-				658278541D4FD78200D36512 /* ReSocket.swift in Sources */,
-				65F739EC1BC9505B00B5E62D /* Rethink.swift in Sources */,
-				65A115251BD2B364007BC661 /* ReDatum.swift in Sources */,
-				655E10F61CB64E63008E3057 /* ReArguments.swift in Sources */,
-				658278561D4FD86100D36512 /* ReResponse.swift in Sources */,
-				65A115161BD0D4B8007BC661 /* ReProtocol.swift in Sources */,
+				OBJ_249 /* Exports.swift in Sources */,
+				OBJ_250 /* ClientStream.swift in Sources */,
+				OBJ_251 /* InternetStream.swift in Sources */,
+				OBJ_252 /* Port.swift in Sources */,
+				OBJ_253 /* ServerStream.swift in Sources */,
+				OBJ_254 /* FoundationStream.swift in Sources */,
+				OBJ_255 /* ReadableStream.swift in Sources */,
+				OBJ_256 /* Stream.swift in Sources */,
+				OBJ_257 /* StreamError.swift in Sources */,
+				OBJ_258 /* WriteableStream.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		65F739D71BC9502400B5E62D /* Sources */ = {
+		OBJ_272 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				65F739E11BC9502400B5E62D /* RethinkTests.swift in Sources */,
+				OBJ_273 /* ReArguments.swift in Sources */,
+				OBJ_274 /* ReConnection.swift in Sources */,
+				OBJ_275 /* ReDatum.swift in Sources */,
+				OBJ_276 /* ReProtocol.swift in Sources */,
+				OBJ_277 /* ReResponse.swift in Sources */,
+				OBJ_278 /* ReSocket.swift in Sources */,
+				OBJ_279 /* Rethink.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_300 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_301 /* SCRAM.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_319 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_320 /* RethinkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		29CA971C1D887CCA0027D914 /* PBXTargetDependency */ = {
+		OBJ_169 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 29CA96DD1D8876EB0027D914 /* GCDAsyncSocket */;
-			targetProxy = 29CA971B1D887CCA0027D914 /* PBXContainerItemProxy */;
+			target = OBJ_128 /* Bits */;
+			targetProxy = 7BA7A81C1EF929C000A4F969 /* PBXContainerItemProxy */;
 		};
-		29CA971E1D887CCE0027D914 /* PBXTargetDependency */ = {
+		OBJ_170 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 29CA96F71D8877040027D914 /* SCRAM */;
-			targetProxy = 29CA971D1D887CCE0027D914 /* PBXContainerItemProxy */;
+			target = OBJ_153 /* Debugging */;
+			targetProxy = 7BA7A81D1EF929C000A4F969 /* PBXContainerItemProxy */;
 		};
-		29CA97201D887CDB0027D914 /* PBXTargetDependency */ = {
+		OBJ_203 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 29CA96EA1D8876F70027D914 /* GCDAsyncSocket iOS */;
-			targetProxy = 29CA971F1D887CDB0027D914 /* PBXContainerItemProxy */;
+			target = OBJ_128 /* Bits */;
+			targetProxy = 7BA7A81E1EF929C000A4F969 /* PBXContainerItemProxy */;
 		};
-		29CA97221D887CDE0027D914 /* PBXTargetDependency */ = {
+		OBJ_204 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 29CA97041D8877100027D914 /* SCRAM iOS */;
-			targetProxy = 29CA97211D887CDE0027D914 /* PBXContainerItemProxy */;
+			target = OBJ_153 /* Debugging */;
+			targetProxy = 7BA7A81F1EF929C000A4F969 /* PBXContainerItemProxy */;
 		};
-		65F739DE1BC9502400B5E62D /* PBXTargetDependency */ = {
+		OBJ_205 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 65F739D01BC9502400B5E62D /* Rethink */;
-			targetProxy = 65F739DD1BC9502400B5E62D /* PBXContainerItemProxy */;
+			target = OBJ_160 /* libc */;
+			targetProxy = 7BA7A8201EF929C000A4F969 /* PBXContainerItemProxy */;
+		};
+		OBJ_239 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_128 /* Bits */;
+			targetProxy = 7BA7A8211EF929C000A4F969 /* PBXContainerItemProxy */;
+		};
+		OBJ_240 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_153 /* Debugging */;
+			targetProxy = 7BA7A8221EF929C000A4F969 /* PBXContainerItemProxy */;
+		};
+		OBJ_241 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_160 /* libc */;
+			targetProxy = 7BA7A8231EF929C000A4F969 /* PBXContainerItemProxy */;
+		};
+		OBJ_242 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_171 /* Core */;
+			targetProxy = 7BA7A8241EF929C000A4F969 /* PBXContainerItemProxy */;
+		};
+		OBJ_243 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_244 /* Transport */;
+			targetProxy = 7BA7A8251EF929C000A4F969 /* PBXContainerItemProxy */;
+		};
+		OBJ_264 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_128 /* Bits */;
+			targetProxy = 7BA7A8261EF929C000A4F969 /* PBXContainerItemProxy */;
+		};
+		OBJ_265 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_153 /* Debugging */;
+			targetProxy = 7BA7A8271EF929C000A4F969 /* PBXContainerItemProxy */;
+		};
+		OBJ_266 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_160 /* libc */;
+			targetProxy = 7BA7A8281EF929C000A4F969 /* PBXContainerItemProxy */;
+		};
+		OBJ_267 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_171 /* Core */;
+			targetProxy = 7BA7A8291EF929C000A4F969 /* PBXContainerItemProxy */;
+		};
+		OBJ_288 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_128 /* Bits */;
+			targetProxy = 7BA7A82A1EF929C000A4F969 /* PBXContainerItemProxy */;
+		};
+		OBJ_289 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_153 /* Debugging */;
+			targetProxy = 7BA7A82B1EF929C000A4F969 /* PBXContainerItemProxy */;
+		};
+		OBJ_290 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_160 /* libc */;
+			targetProxy = 7BA7A82C1EF929C000A4F969 /* PBXContainerItemProxy */;
+		};
+		OBJ_291 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_171 /* Core */;
+			targetProxy = 7BA7A82D1EF929C000A4F969 /* PBXContainerItemProxy */;
+		};
+		OBJ_292 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_244 /* Transport */;
+			targetProxy = 7BA7A82E1EF929C000A4F969 /* PBXContainerItemProxy */;
+		};
+		OBJ_293 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_206 /* Sockets */;
+			targetProxy = 7BA7A82F1EF929C000A4F969 /* PBXContainerItemProxy */;
+		};
+		OBJ_294 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_295 /* SCRAM */;
+			targetProxy = 7BA7A8301EF929C000A4F969 /* PBXContainerItemProxy */;
+		};
+		OBJ_309 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_128 /* Bits */;
+			targetProxy = 7BA7A8311EF929C000A4F969 /* PBXContainerItemProxy */;
+		};
+		OBJ_310 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_153 /* Debugging */;
+			targetProxy = 7BA7A8321EF929C000A4F969 /* PBXContainerItemProxy */;
+		};
+		OBJ_311 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_160 /* libc */;
+			targetProxy = 7BA7A8331EF929C000A4F969 /* PBXContainerItemProxy */;
+		};
+		OBJ_312 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_171 /* Core */;
+			targetProxy = 7BA7A8341EF929C000A4F969 /* PBXContainerItemProxy */;
+		};
+		OBJ_313 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_244 /* Transport */;
+			targetProxy = 7BA7A8351EF929C000A4F969 /* PBXContainerItemProxy */;
+		};
+		OBJ_314 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_206 /* Sockets */;
+			targetProxy = 7BA7A8361EF929C000A4F969 /* PBXContainerItemProxy */;
+		};
+		OBJ_330 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_128 /* Bits */;
+			targetProxy = 7BA7A8371EF929C000A4F969 /* PBXContainerItemProxy */;
+		};
+		OBJ_331 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_153 /* Debugging */;
+			targetProxy = 7BA7A8381EF929C000A4F969 /* PBXContainerItemProxy */;
+		};
+		OBJ_332 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_160 /* libc */;
+			targetProxy = 7BA7A8391EF929C000A4F969 /* PBXContainerItemProxy */;
+		};
+		OBJ_333 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_171 /* Core */;
+			targetProxy = 7BA7A83A1EF929C000A4F969 /* PBXContainerItemProxy */;
+		};
+		OBJ_334 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_244 /* Transport */;
+			targetProxy = 7BA7A83B1EF929C000A4F969 /* PBXContainerItemProxy */;
+		};
+		OBJ_335 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_206 /* Sockets */;
+			targetProxy = 7BA7A83C1EF929C000A4F969 /* PBXContainerItemProxy */;
+		};
+		OBJ_336 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_295 /* SCRAM */;
+			targetProxy = 7BA7A83D1EF929C000A4F969 /* PBXContainerItemProxy */;
+		};
+		OBJ_337 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_268 /* Rethink */;
+			targetProxy = 7BA7A83E1EF929C000A4F969 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		29CA96E31D8876EB0027D914 /* Debug */ = {
+		OBJ_130 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/GCDAsyncSocket/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = nl.pixelspark.Rethink.GCDAsyncSocket;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		29CA96E41D8876EB0027D914 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/GCDAsyncSocket/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = nl.pixelspark.Rethink.GCDAsyncSocket;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		29CA96F11D8876F70027D914 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/GCDAsyncSocket/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "nl.pixelspark.Rethink.GCDAsyncSocket-iOS";
-				PRODUCT_NAME = GCDAsyncSocket;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		29CA96F21D8876F70027D914 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/GCDAsyncSocket/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "nl.pixelspark.Rethink.GCDAsyncSocket-iOS";
-				PRODUCT_NAME = GCDAsyncSocket;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		29CA96FE1D8877040027D914 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/SCRAM/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = nl.pixelspark.Rethink.SCRAM;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		29CA96FF1D8877040027D914 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/SCRAM/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = nl.pixelspark.Rethink.SCRAM;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		29CA970B1D8877100027D914 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/SCRAM/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "nl.pixelspark.Rethink.SCRAM-iOS";
-				PRODUCT_NAME = SCRAM;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		29CA970C1D8877100027D914 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/SCRAM/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "nl.pixelspark.Rethink.SCRAM-iOS";
-				PRODUCT_NAME = SCRAM;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		65646BA81D577F3000E58137 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 2T2T7HAA8S;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/Rethink/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nl.pixelspark.Rethink;
-				PRODUCT_NAME = Rethink;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		65646BA91D577F3000E58137 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 2T2T7HAA8S;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/Rethink/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nl.pixelspark.Rethink;
-				PRODUCT_NAME = Rethink;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		65F739E31BC9502400B5E62D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
+				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_SWIFT_FLAGS = "";
-				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Rethink.xcodeproj/Bits_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Bits;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGET_NAME = Bits;
 			};
 			name = Debug;
 		};
-		65F739E41BC9502400B5E62D /* Release */ = {
+		OBJ_131 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Rethink.xcodeproj/Bits_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Bits;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGET_NAME = Bits;
+			};
+			name = Release;
+		};
+		OBJ_155 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Rethink.xcodeproj/Debugging_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Debugging;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGET_NAME = Debugging;
+			};
+			name = Debug;
+		};
+		OBJ_156 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Rethink.xcodeproj/Debugging_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Debugging;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGET_NAME = Debugging;
+			};
+			name = Release;
+		};
+		OBJ_162 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Rethink.xcodeproj/libc_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = libc;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGET_NAME = libc;
+			};
+			name = Debug;
+		};
+		OBJ_163 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Rethink.xcodeproj/libc_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = libc;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGET_NAME = libc;
+			};
+			name = Release;
+		};
+		OBJ_173 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Rethink.xcodeproj/Core_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Core;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGET_NAME = Core;
+			};
+			name = Debug;
+		};
+		OBJ_174 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Rethink.xcodeproj/Core_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Core;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGET_NAME = Core;
+			};
+			name = Release;
+		};
+		OBJ_208 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Rethink.xcodeproj/Sockets_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Sockets;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGET_NAME = Sockets;
+			};
+			name = Debug;
+		};
+		OBJ_209 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Rethink.xcodeproj/Sockets_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Sockets;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGET_NAME = Sockets;
+			};
+			name = Release;
+		};
+		OBJ_246 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Rethink.xcodeproj/Transport_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Transport;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGET_NAME = Transport;
+			};
+			name = Debug;
+		};
+		OBJ_247 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Rethink.xcodeproj/Transport_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Transport;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGET_NAME = Transport;
+			};
+			name = Release;
+		};
+		OBJ_270 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Sources/SCRAM/include",
+					"$(SRCROOT)/Rethink.xcodeproj/GeneratedModuleMap/SCRAM",
+				);
+				INFOPLIST_FILE = Rethink.xcodeproj/Rethink_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_TEMP_DIR)/SymlinkLibs/";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/Rethink.xcodeproj/GeneratedModuleMap/SCRAM/module.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = Rethink;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGET_NAME = Rethink;
+			};
+			name = Debug;
+		};
+		OBJ_271 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Sources/SCRAM/include",
+					"$(SRCROOT)/Rethink.xcodeproj/GeneratedModuleMap/SCRAM",
+				);
+				INFOPLIST_FILE = Rethink.xcodeproj/Rethink_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_TEMP_DIR)/SymlinkLibs/";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/Rethink.xcodeproj/GeneratedModuleMap/SCRAM/module.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = Rethink;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGET_NAME = Rethink;
+			};
+			name = Release;
+		};
+		OBJ_297 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = NO;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Sources/SCRAM/include",
+				);
+				INFOPLIST_FILE = Rethink.xcodeproj/SCRAM_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SCRAM;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGET_NAME = SCRAM;
+			};
+			name = Debug;
+		};
+		OBJ_298 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = NO;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Sources/SCRAM/include",
+				);
+				INFOPLIST_FILE = Rethink.xcodeproj/SCRAM_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SCRAM;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGET_NAME = SCRAM;
+			};
+			name = Release;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_SWIFT_FLAGS = "";
-				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		65F739E61BC9502400B5E62D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/Rethink/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = nl.pixelspark.Rethink;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				USE_HEADERMAP = NO;
 			};
 			name = Debug;
 		};
-		65F739E71BC9502400B5E62D /* Release */ = {
+		OBJ_317 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/Rethink/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = nl.pixelspark.Rethink;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Sources/SCRAM/include",
+					"$(SRCROOT)/Rethink.xcodeproj/GeneratedModuleMap/SCRAM",
+				);
+				INFOPLIST_FILE = Rethink.xcodeproj/RethinkTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_TEMP_DIR)/SymlinkLibs/";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/Rethink.xcodeproj/GeneratedModuleMap/SCRAM/module.modulemap";
+				TARGET_NAME = RethinkTests;
+			};
+			name = Debug;
+		};
+		OBJ_318 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Sources/SCRAM/include",
+					"$(SRCROOT)/Rethink.xcodeproj/GeneratedModuleMap/SCRAM",
+				);
+				INFOPLIST_FILE = Rethink.xcodeproj/RethinkTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_TEMP_DIR)/SymlinkLibs/";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/Rethink.xcodeproj/GeneratedModuleMap/SCRAM/module.modulemap";
+				TARGET_NAME = RethinkTests;
 			};
 			name = Release;
 		};
-		65F739E91BC9502400B5E62D /* Debug */ = {
+		OBJ_4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Tests/RethinkTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				OTHER_SWIFT_FLAGS = "-DDEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = nl.pixelspark.RethinkTests;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "-DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		65F739EA1BC9502400B5E62D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Tests/RethinkTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				OTHER_SWIFT_FLAGS = "-DDEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = nl.pixelspark.RethinkTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				USE_HEADERMAP = NO;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		29CA96E51D8876EB0027D914 /* Build configuration list for PBXNativeTarget "GCDAsyncSocket" */ = {
+		OBJ_129 /* Build configuration list for PBXNativeTarget "Bits" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				29CA96E31D8876EB0027D914 /* Debug */,
-				29CA96E41D8876EB0027D914 /* Release */,
+				OBJ_130 /* Debug */,
+				OBJ_131 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		29CA96F01D8876F70027D914 /* Build configuration list for PBXNativeTarget "GCDAsyncSocket iOS" */ = {
+		OBJ_154 /* Build configuration list for PBXNativeTarget "Debugging" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				29CA96F11D8876F70027D914 /* Debug */,
-				29CA96F21D8876F70027D914 /* Release */,
+				OBJ_155 /* Debug */,
+				OBJ_156 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		29CA96FD1D8877040027D914 /* Build configuration list for PBXNativeTarget "SCRAM" */ = {
+		OBJ_161 /* Build configuration list for PBXNativeTarget "libc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				29CA96FE1D8877040027D914 /* Debug */,
-				29CA96FF1D8877040027D914 /* Release */,
+				OBJ_162 /* Debug */,
+				OBJ_163 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		29CA970A1D8877100027D914 /* Build configuration list for PBXNativeTarget "SCRAM iOS" */ = {
+		OBJ_172 /* Build configuration list for PBXNativeTarget "Core" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				29CA970B1D8877100027D914 /* Debug */,
-				29CA970C1D8877100027D914 /* Release */,
+				OBJ_173 /* Debug */,
+				OBJ_174 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		65646BAA1D577F3000E58137 /* Build configuration list for PBXNativeTarget "Rethink iOS" */ = {
+		OBJ_2 /* Build configuration list for PBXProject "Rethink" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				65646BA81D577F3000E58137 /* Debug */,
-				65646BA91D577F3000E58137 /* Release */,
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		65F739CB1BC9502400B5E62D /* Build configuration list for PBXProject "Rethink" */ = {
+		OBJ_207 /* Build configuration list for PBXNativeTarget "Sockets" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				65F739E31BC9502400B5E62D /* Debug */,
-				65F739E41BC9502400B5E62D /* Release */,
+				OBJ_208 /* Debug */,
+				OBJ_209 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		65F739E51BC9502400B5E62D /* Build configuration list for PBXNativeTarget "Rethink" */ = {
+		OBJ_245 /* Build configuration list for PBXNativeTarget "Transport" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				65F739E61BC9502400B5E62D /* Debug */,
-				65F739E71BC9502400B5E62D /* Release */,
+				OBJ_246 /* Debug */,
+				OBJ_247 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		65F739E81BC9502400B5E62D /* Build configuration list for PBXNativeTarget "RethinkTests" */ = {
+		OBJ_269 /* Build configuration list for PBXNativeTarget "Rethink" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				65F739E91BC9502400B5E62D /* Debug */,
-				65F739EA1BC9502400B5E62D /* Release */,
+				OBJ_270 /* Debug */,
+				OBJ_271 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_296 /* Build configuration list for PBXNativeTarget "SCRAM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_297 /* Debug */,
+				OBJ_298 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_316 /* Build configuration list for PBXNativeTarget "RethinkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_317 /* Debug */,
+				OBJ_318 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 65F739C81BC9502400B5E62D /* Project object */;
+	rootObject = OBJ_1 /* Project object */;
 }

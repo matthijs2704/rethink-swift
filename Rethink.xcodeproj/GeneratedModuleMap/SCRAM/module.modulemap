@@ -1,0 +1,4 @@
+module SCRAM {
+    umbrella header "/Users/matthijs/Development/rethink-swift/Sources/SCRAM/include/SCRAM.h"
+    export *
+}

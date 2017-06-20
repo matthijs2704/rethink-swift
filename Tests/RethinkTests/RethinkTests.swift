@@ -10,7 +10,7 @@ class RethinkTests: XCTestCase {
 			expectFinish.fulfill()
 		}
 
-		self.waitForExpectations(timeout: 15.0) { (err) -> Void in
+		self.waitForExpectations(timeout: 30.0) { (err) -> Void in
 			if let e = err {
 				// Note: referencing self here deliberately to prevent test from being destroyed prematurely
 				print("Error=\(e) \(self)")
