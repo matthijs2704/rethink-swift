@@ -16,7 +16,7 @@ before_script:
  - sleep 10
 
 script:
-- swift package fetch
+- swift package generate-xcodeproj
 - xcodebuild clean build test -project Rethink.xcodeproj -scheme Rethink CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY=""
 
 after_script:

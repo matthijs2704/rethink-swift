@@ -130,245 +130,245 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7BA7A81C1EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD7175E1EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_128;
 			remoteInfo = Bits;
 		};
-		7BA7A81D1EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD7175F1EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_153;
 			remoteInfo = Debugging;
 		};
-		7BA7A81E1EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD717601EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_128;
 			remoteInfo = Bits;
 		};
-		7BA7A81F1EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD717611EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_153;
 			remoteInfo = Debugging;
 		};
-		7BA7A8201EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD717621EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_160;
 			remoteInfo = libc;
 		};
-		7BA7A8211EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD717631EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_128;
 			remoteInfo = Bits;
 		};
-		7BA7A8221EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD717641EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_153;
 			remoteInfo = Debugging;
 		};
-		7BA7A8231EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD717651EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_160;
 			remoteInfo = libc;
 		};
-		7BA7A8241EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD717661EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_171;
 			remoteInfo = Core;
 		};
-		7BA7A8251EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD717671EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_244;
 			remoteInfo = Transport;
 		};
-		7BA7A8261EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD717681EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_128;
 			remoteInfo = Bits;
 		};
-		7BA7A8271EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD717691EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_153;
 			remoteInfo = Debugging;
 		};
-		7BA7A8281EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD7176A1EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_160;
 			remoteInfo = libc;
 		};
-		7BA7A8291EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD7176B1EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_171;
 			remoteInfo = Core;
 		};
-		7BA7A82A1EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD7176C1EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_128;
 			remoteInfo = Bits;
 		};
-		7BA7A82B1EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD7176D1EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_153;
 			remoteInfo = Debugging;
 		};
-		7BA7A82C1EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD7176E1EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_160;
 			remoteInfo = libc;
 		};
-		7BA7A82D1EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD7176F1EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_171;
 			remoteInfo = Core;
 		};
-		7BA7A82E1EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD717701EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_244;
 			remoteInfo = Transport;
 		};
-		7BA7A82F1EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD717711EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_206;
 			remoteInfo = Sockets;
 		};
-		7BA7A8301EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD717721EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_295;
 			remoteInfo = SCRAM;
 		};
-		7BA7A8311EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD717731EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_128;
 			remoteInfo = Bits;
 		};
-		7BA7A8321EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD717741EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_153;
 			remoteInfo = Debugging;
 		};
-		7BA7A8331EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD717751EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_160;
 			remoteInfo = libc;
 		};
-		7BA7A8341EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD717761EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_171;
 			remoteInfo = Core;
 		};
-		7BA7A8351EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD717771EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_244;
 			remoteInfo = Transport;
 		};
-		7BA7A8361EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD717781EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_206;
 			remoteInfo = Sockets;
 		};
-		7BA7A8371EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD717791EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_128;
 			remoteInfo = Bits;
 		};
-		7BA7A8381EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD7177A1EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_153;
 			remoteInfo = Debugging;
 		};
-		7BA7A8391EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD7177B1EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_160;
 			remoteInfo = libc;
 		};
-		7BA7A83A1EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD7177C1EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_171;
 			remoteInfo = Core;
 		};
-		7BA7A83B1EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD7177D1EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_244;
 			remoteInfo = Transport;
 		};
-		7BA7A83C1EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD7177E1EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_206;
 			remoteInfo = Sockets;
 		};
-		7BA7A83D1EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD7177F1EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_295;
 			remoteInfo = SCRAM;
 		};
-		7BA7A83E1EF929C000A4F969 /* PBXContainerItemProxy */ = {
+		7BD717801EF93F0100D9760A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -405,7 +405,7 @@
 		OBJ_122 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_123 /* Sockets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Sockets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_124 /* Transport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Transport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_125 /* Rethink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Rethink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_125 /* Rethink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Rethink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_126 /* SCRAM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SCRAM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_127 /* RethinkTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = RethinkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_13 /* ReResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReResponse.swift; sourceTree = "<group>"; };
@@ -1275,177 +1275,177 @@
 		OBJ_169 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_128 /* Bits */;
-			targetProxy = 7BA7A81C1EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD7175E1EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_170 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_153 /* Debugging */;
-			targetProxy = 7BA7A81D1EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD7175F1EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_203 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_128 /* Bits */;
-			targetProxy = 7BA7A81E1EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD717601EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_204 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_153 /* Debugging */;
-			targetProxy = 7BA7A81F1EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD717611EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_205 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_160 /* libc */;
-			targetProxy = 7BA7A8201EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD717621EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_239 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_128 /* Bits */;
-			targetProxy = 7BA7A8211EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD717631EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_240 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_153 /* Debugging */;
-			targetProxy = 7BA7A8221EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD717641EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_241 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_160 /* libc */;
-			targetProxy = 7BA7A8231EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD717651EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_242 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_171 /* Core */;
-			targetProxy = 7BA7A8241EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD717661EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_243 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_244 /* Transport */;
-			targetProxy = 7BA7A8251EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD717671EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_264 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_128 /* Bits */;
-			targetProxy = 7BA7A8261EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD717681EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_265 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_153 /* Debugging */;
-			targetProxy = 7BA7A8271EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD717691EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_266 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_160 /* libc */;
-			targetProxy = 7BA7A8281EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD7176A1EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_267 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_171 /* Core */;
-			targetProxy = 7BA7A8291EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD7176B1EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_288 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_128 /* Bits */;
-			targetProxy = 7BA7A82A1EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD7176C1EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_289 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_153 /* Debugging */;
-			targetProxy = 7BA7A82B1EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD7176D1EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_290 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_160 /* libc */;
-			targetProxy = 7BA7A82C1EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD7176E1EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_291 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_171 /* Core */;
-			targetProxy = 7BA7A82D1EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD7176F1EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_292 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_244 /* Transport */;
-			targetProxy = 7BA7A82E1EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD717701EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_293 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_206 /* Sockets */;
-			targetProxy = 7BA7A82F1EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD717711EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_294 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_295 /* SCRAM */;
-			targetProxy = 7BA7A8301EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD717721EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_309 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_128 /* Bits */;
-			targetProxy = 7BA7A8311EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD717731EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_310 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_153 /* Debugging */;
-			targetProxy = 7BA7A8321EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD717741EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_311 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_160 /* libc */;
-			targetProxy = 7BA7A8331EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD717751EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_312 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_171 /* Core */;
-			targetProxy = 7BA7A8341EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD717761EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_313 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_244 /* Transport */;
-			targetProxy = 7BA7A8351EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD717771EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_314 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_206 /* Sockets */;
-			targetProxy = 7BA7A8361EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD717781EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_330 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_128 /* Bits */;
-			targetProxy = 7BA7A8371EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD717791EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_331 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_153 /* Debugging */;
-			targetProxy = 7BA7A8381EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD7177A1EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_332 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_160 /* libc */;
-			targetProxy = 7BA7A8391EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD7177B1EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_333 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_171 /* Core */;
-			targetProxy = 7BA7A83A1EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD7177C1EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_334 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_244 /* Transport */;
-			targetProxy = 7BA7A83B1EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD7177D1EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_335 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_206 /* Sockets */;
-			targetProxy = 7BA7A83C1EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD7177E1EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_336 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_295 /* SCRAM */;
-			targetProxy = 7BA7A83D1EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD7177F1EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 		OBJ_337 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_268 /* Rethink */;
-			targetProxy = 7BA7A83E1EF929C000A4F969 /* PBXContainerItemProxy */;
+			targetProxy = 7BD717801EF93F0100D9760A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
