@@ -24,7 +24,7 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE. **/
 import Foundation
 
-public enum ReError {
+public enum ReError: Error {
 	case fatal(String)
 	case other(Error)
 

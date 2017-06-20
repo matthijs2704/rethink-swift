@@ -34,11 +34,11 @@ public class R {
 		return dict
 	}
 
-	public static func connect(_ url: URL, user: String = ReProtocol.defaultUser, password: String = ReProtocol.defaultPassword, version: ReProtocolVersion = .v1_0, callback: @escaping (ReError?, ReConnection) -> ()) {
-		let c = ReConnection(url: url, protocolVersion: version)
-		c.connect(user, password: password) { err in
-			callback(err, c)
-		}
+	public static func connect(_ url: URL, user: String = ReProtocol.defaultUser, password: String = ReProtocol.defaultPassword, version: ReProtocolVersion = .v1_0, callback: @escaping (Error?, ReConnection) -> ()) {
+            let c = ReConnection(url: url, protocolVersion: version)
+            c.connect(user, password: password) { err in
+                callback(err, c)
+            }
 	}
 
 	public static func uuid() -> ReQueryValue {

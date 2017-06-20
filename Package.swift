@@ -6,5 +6,8 @@ let package = Package(
 		Target(name: "Rethink", dependencies: ["GCDAsyncSocket", "SCRAM"]),
 		Target(name: "GCDAsyncSocket"),
 		Target(name: "SCRAM")
-	]
+	],
+	dependencies: [
+        .Package(url: "https://github.com/vapor/sockets.git", majorVersion: 2),
+    ]
 )

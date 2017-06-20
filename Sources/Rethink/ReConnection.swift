@@ -23,10 +23,10 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE. **/
 import Foundation
-import GCDAsyncSocket
+import Sockets
 import SCRAM
 
-public class ReConnection: NSObject, GCDAsyncSocketDelegate {
+public class ReConnection: NSObject {
 	public let url: URL
 	public let protocolVersion: ReProtocolVersion
 	public var authenticationKey: String? { get { return self.url.user } }

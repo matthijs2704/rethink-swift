@@ -23,7 +23,7 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE. **/
 import Foundation
-import GCDAsyncSocket
+import Sockets
 
 internal enum ReSocketState {
 	case unconnected
@@ -31,21 +31,21 @@ internal enum ReSocketState {
 	case connected
 }
 
-internal class ReSocket: NSObject, GCDAsyncSocketDelegate {
+internal class ReSocket: NSObject {
 	typealias WriteCallback = (String?) -> ()
 	typealias ReadCallback = (Data?) -> ()
 
-	let socket: GCDAsyncSocket
+	var socket: TCPInternetSocket? = nil
 	internal var state: ReSocketState = .unconnected
-
+    internal var dispatchQueue: DispatchQueue
+    
 	private var onConnect: ((String?) -> ())?
 	private var writeCallbacks: [Int: WriteCallback] = [:]
 	private var readCallbacks: [Int: ReadCallback] = [:]
 
 	init(queue: DispatchQueue) {
-		self.socket = GCDAsyncSocket(delegate: nil, delegateQueue: queue)
+        self.dispatchQueue = queue
 		super.init()
-		self.socket.delegate = self
 	}
 
 	func connect(_ url: URL, withTimeout timeout: TimeInterval = 5.0, callback: @escaping (String?) -> ()) {
@@ -53,23 +53,26 @@ internal class ReSocket: NSObject, GCDAsyncSocketDelegate {
 		self.onConnect = callback
 		self.state = .connecting
 
-		guard let host = url.host else { return callback("Invalid URL") }
+        guard let scheme = url.scheme else { return callback("Invalid scheme") }
+        guard let host = url.host else { return callback("Invalid URL") }
 		let port = (url as NSURL).port ?? 28015
 
 		do {
-			try socket.connect(toHost: host, onPort: port.uint16Value, withTimeout: timeout)
+            self.socket = try TCPInternetSocket.init(scheme: scheme, hostname: host, port: port as! UInt16)
+			try socket!.connect()
+            self.socket(self.socket!, didConnectToHost: host, port: port as! UInt16)
 		}
 		catch let e {
 			return callback(e.localizedDescription)
 		}
 	}
 
-	@objc internal func socket(_ sock: GCDAsyncSocket, didConnectToHost host: String, port: UInt16) {
+	internal func socket(_ sock: TCPInternetSocket, didConnectToHost host: String, port: UInt16) {
 		self.state = .connected
 		self.onConnect?(nil)
 	}
 
-	@objc internal func socketDidDisconnect(_ sock: GCDAsyncSocket, withError err: Error?) {
+	internal func socketDidDisconnect(_ sock: TCPInternetSocket, withError err: Error?) {
 		self.state = .unconnected
 	}
 
@@ -79,11 +82,23 @@ internal class ReSocket: NSObject, GCDAsyncSocketDelegate {
 		if self.state != .connected {
 			return callback(nil)
 		}
-
-		socket.delegateQueue!.async {
+        
+        guard let tcpSock = self.socket else {
+            return callback(nil)
+        }
+        
+        self.dispatchQueue.async {
 			let tag = (self.readCallbacks.count + 1)
 			self.readCallbacks[tag] = callback
-			self.socket.readData(toLength: UInt(length), withTimeout: -1.0, tag: tag)
+            
+            do {
+                _ = try tcpSock.waitForReadableData(timeout: nil)
+//                _ = try tcpSock.waitForReadableData(timeout: nil)
+                let bytes = try tcpSock.read(max: length)//(toLength: UInt(length), withTimeout: -1.0, tag: tag)
+                self.socket(tcpSock, didRead: Data.init(bytes: bytes), withTag: tag)
+            } catch {
+                return callback(nil)
+            }
 		}
 	}
 
@@ -91,9 +106,12 @@ internal class ReSocket: NSObject, GCDAsyncSocketDelegate {
 		if self.state != .connected {
 			return callback(nil)
 		}
+        
+        guard let tcpSock = self.socket else {
+            return callback(nil)
+        }
 
-		let zero = Data(bytes: UnsafePointer<UInt8>([UInt8(0)]), count: 1)
-		socket.delegateQueue!.async {
+		self.dispatchQueue.async {
 			let tag = (self.readCallbacks.count + 1)
 			self.readCallbacks[tag] = { data in
 				if let d = data {
@@ -108,7 +126,19 @@ internal class ReSocket: NSObject, GCDAsyncSocketDelegate {
 					callback(nil)
 				}
 			}
-			self.socket.readData(to: zero, withTimeout: -1.0, tag: tag)
+            do {
+                _ = try tcpSock.waitForReadableData(timeout: nil)
+                var bytes: Bytes = []
+                while let dataRead = try tcpSock.readByte() {
+                    bytes.append(dataRead)
+                    if dataRead == UInt8(0) {
+                        break
+                    }
+                }
+                self.socket(tcpSock, didRead: Data.init(bytes: bytes), withTag: tag)
+            } catch {
+                return callback(nil)
+            }
 		}
 	}
 
@@ -116,39 +146,47 @@ internal class ReSocket: NSObject, GCDAsyncSocketDelegate {
 		if self.state != .connected {
 			return callback("socket is not connected!")
 		}
+        
+        guard let tcpSock = self.socket else {
+            return callback("socket is nil!")
+        }
 
-		socket.delegateQueue!.async {
+		self.dispatchQueue.async {
 			let tag = (self.writeCallbacks.count + 1)
 			self.writeCallbacks[tag] = callback
-			self.socket.write(data, withTimeout: -1.0, tag: tag)
-		}
+            let bytes = data.makeBytes()
+            let num = try! tcpSock.write(bytes)
+//            try! tcpSock.writeLineEnd()
+            print (num)
+            self.socket(tcpSock, didWriteDataWithTag: tag)
+        }
 	}
 
-	@objc internal func socket(_ sock: GCDAsyncSocket, didWriteDataWithTag tag: Int) {
-		socket.delegateQueue!.async {
-			if let cb = self.writeCallbacks[tag] {
-				cb(nil)
-				self.writeCallbacks.removeValue(forKey: tag)
-			}
-		}
-	}
-
-	@objc internal func socket(_ sock: GCDAsyncSocket, didRead data: Data, withTag tag: Int) {
-		socket.delegateQueue!.async {
-			if let cb = self.readCallbacks[tag] {
-				cb(data)
-				self.readCallbacks.removeValue(forKey: tag)
-			}
-		}
-	}
-
+    internal func socket(_ sock: TCPInternetSocket, didWriteDataWithTag tag: Int) {
+        self.dispatchQueue.async {
+            if let cb = self.writeCallbacks[tag] {
+                cb(nil)
+                self.writeCallbacks.removeValue(forKey: tag)
+            }
+        }
+    }
+    
+    internal func socket(_ sock: TCPInternetSocket, didRead data: Data, withTag tag: Int) {
+        self.dispatchQueue.async {
+            if let cb = self.readCallbacks[tag] {
+                cb(data)
+                self.readCallbacks.removeValue(forKey: tag)
+            }
+        }
+    }
+    
 	func disconnect() {
-		self.socket.disconnect()
+		try? self.socket?.close()
 		self.state = .unconnected
 	}
 
 	deinit {
-		self.socket.disconnect()
+		try? self.socket?.close()
 	}
 }
 
