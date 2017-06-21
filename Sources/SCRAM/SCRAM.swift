@@ -166,7 +166,7 @@ final public class SCRAM {
     }
     
     func clientFinalMessage() -> String {
-        let clientProofString: String = String.init(bytes: clientProofData!.base64Encoded)
+        let clientProofString: String = String.init(bytes: self.clientProofData!.base64Encoded)
         return "c=biws,r=\(combinedNonce!),p=\(clientProofString)"
     }
     
