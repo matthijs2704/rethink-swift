@@ -6,7 +6,7 @@ branches:
 
 xcode_project: Rethink.xcodeproj
 xcode_scheme: Rethink
-osx_image: xcode8
+osx_image: xcode8.3
 
 before_install:
  - brew install rethinkdb
