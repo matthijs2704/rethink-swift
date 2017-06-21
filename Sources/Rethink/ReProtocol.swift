@@ -42,8 +42,8 @@ internal class ReProtocol {
 
 	static let protocolType: UInt32 = 0x7e6970c7 // JSON
 	static let handshakeSuccessResponse = "SUCCESS"
-	static let defaultUser = "admin"
-	static let defaultPassword = ""
+	static let defaultUser = "matthijs"
+	static let defaultPassword = "8A,})TJzn8nWUKiEVAeTXaGB*Te/Wj.2ZMg,e3(A6?fk4VCNYo8Di4wBJFPZ2%2a"
 
 	static let responseTypeSuccessAtom = 1
 	static let responseTypeSuccessSequence = 2

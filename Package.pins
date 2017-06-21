@@ -2,9 +2,21 @@
   "autoPin": true,
   "pins": [
     {
+      "package": "BCrypt",
+      "reason": null,
+      "repositoryURL": "https://github.com/vapor/bcrypt.git",
+      "version": "1.0.0"
+    },
+    {
       "package": "Bits",
       "reason": null,
       "repositoryURL": "https://github.com/vapor/bits.git",
+      "version": "1.0.0"
+    },
+    {
+      "package": "CTLS",
+      "reason": null,
+      "repositoryURL": "https://github.com/vapor/ctls.git",
       "version": "1.0.0"
     },
     {
@@ -14,9 +26,21 @@
       "version": "2.0.2"
     },
     {
+      "package": "Crypto",
+      "reason": null,
+      "repositoryURL": "https://github.com/vapor/crypto.git",
+      "version": "2.0.0"
+    },
+    {
       "package": "Debugging",
       "reason": null,
       "repositoryURL": "https://github.com/vapor/debugging.git",
+      "version": "1.0.0"
+    },
+    {
+      "package": "Random",
+      "reason": null,
+      "repositoryURL": "https://github.com/vapor/random.git",
       "version": "1.0.0"
     },
     {

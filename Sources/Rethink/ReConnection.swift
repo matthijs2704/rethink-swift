@@ -154,12 +154,13 @@ public class ReConnection: NSObject {
 
 	private func performSCRAMAuthentication(_ username: String, password: String, callback: @escaping (ReError?) -> ()) {
 		assert(self.protocolVersion == .v1_0, "SCRAM authentication not supported with protocol version \(self.protocolVersion)")
-		let scram = SCRAM(username: username, password: password)
+		let scram = SCRAM.init(username: username, password: password)
+        
 		var zeroByte: UInt8 = 0x00
 
 		// Send authentication first message
 		do {
-			let firstMessage: [String: Any] = ["protocol_version": 0, "authentication_method": "SCRAM-SHA-256", "authentication": scram.clientFirstMessage]
+			let firstMessage: [String: Any] = ["protocol_version": 0, "authentication_method": "SCRAM-SHA-256", "authentication": scram.clientFirstMessage()]
 			let data = try JSONSerialization.data(withJSONObject: firstMessage, options: [])
 			var zeroTerminatedData = NSData(data: data) as Data
 			zeroTerminatedData.append(&zeroByte, count: 1)
@@ -175,8 +176,8 @@ public class ReConnection: NSObject {
 						if let s = replyString {
 							if let reply = try JSONSerialization.jsonObject(with: s.data(using: String.Encoding.ascii)!, options: []) as? [String: AnyObject] {
 								if let success = reply["success"] as? NSNumber, success.boolValue {
-									let authData = reply["authentication"] as! String
-									if let shouldSend = scram.receive(authData) {
+                                    let authData = reply["authentication"] as! String
+                                    if let shouldSend = try scram.receive(authData) {
 										// Send the generated reply back
 										let secondMessage = [
 											"authentication": shouldSend
@@ -197,7 +198,7 @@ public class ReConnection: NSObject {
 														if let reply = try JSONSerialization.jsonObject(with: s.data(using: String.Encoding.ascii)!, options: []) as? [String: AnyObject] {
 															if let success = reply["success"] as? NSNumber, success.boolValue {
 																let authData = reply["authentication"] as! String
-																scram.receive(authData)
+																try scram.receive(authData)
 																if scram.authenticated {
 																	return callback(nil)
 																}

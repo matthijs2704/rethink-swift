@@ -8,5 +8,7 @@ let package = Package(
 	],
 	dependencies: [
         .Package(url: "https://github.com/vapor/sockets.git", majorVersion: 2),
+        .Package(url: "https://github.com/vapor/crypto.git", majorVersion: 2),
+        .Package(url: "https://github.com/vapor/bcrypt.git", majorVersion: 1),
     ]
 )
