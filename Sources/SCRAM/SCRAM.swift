@@ -1,6 +1,5 @@
 import Foundation
 import Crypto
-import BCrypt
 
 final public class SCRAM {
     let gs2BindFlag = "n,,"
@@ -171,6 +170,27 @@ final public class SCRAM {
         return "c=biws,r=\(combinedNonce!),p=\(clientProofString)"
     }
     
+    private func hashPassword(password: Bytes, salt: Bytes, iterations: Int) throws -> Bytes {
+        var mutableSalt = salt
+        let zeroHex: UInt8 = 0x00
+        let oneHex: UInt8 = 0x01
+        
+        mutableSalt.append(zeroHex)
+        mutableSalt.append(zeroHex)
+        mutableSalt.append(zeroHex)
+        mutableSalt.append(oneHex)
+        
+        var result = try HMAC.init(.sha256, mutableSalt).authenticate(key: password)
+        var previousResult = Bytes.init(result)
+        
+        for _ in 1..<iterations {
+            previousResult = try HMAC.init(.sha256, mutableSalt).authenticate(key: password)
+            result = xor(result, previousResult)
+        }
+        
+        return result
+    }
+    
     private func calculateProofs() throws -> Bool {
         guard let salt = self.salt else {
             return false
@@ -183,7 +203,7 @@ final public class SCRAM {
         let passwordData = self.password.makeBytes()
         let saltData = salt.makeBytes()
         
-        let saltedPasswordData = try PBKDF2.calculate(passwordData, usingSalt: saltData, iterating: count)
+        let saltedPasswordData = try self.hashPassword(password: passwordData, salt: saltData, iterations: self.count)
         
         let clientKeyBytes = try HMAC.init(.sha256, "Client Key".makeBytes()).authenticate(key: saltedPasswordData)
         let serverKeyBytes = try HMAC.init(.sha256, "Server Key".makeBytes()).authenticate(key: saltedPasswordData)

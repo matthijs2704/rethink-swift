@@ -8,28 +8,28 @@
 import Foundation
 
 public func xor(_ a: [UInt8], _ b:[UInt8]) -> [UInt8] {
-    //    var xored = [UInt8](repeating: 0, count: max(a.count, b.count))
-    //    for i in 0..<xored.count {
-    //        var aByte: UInt8!
-    //        if i >= a.count && i < b.count{
-    //            aByte = UInt8(0)
-    //        }else {
-    //            aByte = a[i]
-    //        }
-    //
-    //        var bByte: UInt8!
-    //        if i >= b.count && i < a.count{
-    //            bByte = UInt8(0)
-    //        }else {
-    //            bByte = b[i]
-    //        }
-    //
-    //        xored[i] = aByte ^ bByte
-    //    }
-    //    return xored
-    let dataA = Data.init(bytes: a)
-    let dataB = Data.init(bytes: b)
-    return dataA.xor(with: dataB).makeBytes()
+        var xored = [UInt8](repeating: 0, count: min(a.count, b.count))
+        for i in 0..<xored.count {
+            var aByte: UInt8!
+            if i >= a.count && i < b.count{
+                aByte = UInt8(0)
+            }else {
+                aByte = a[i]
+            }
+    
+            var bByte: UInt8!
+            if i >= b.count && i < a.count{
+                bByte = UInt8(0)
+            }else {
+                bByte = b[i]
+            }
+    
+            xored[i] = aByte ^ bByte
+        }
+        return xored
+//    let dataA = Data.init(bytes: a)
+//    let dataB = Data.init(bytes: b)
+//    return dataA.xor(with: dataB).makeBytes()
 }
 
 public extension Data {
