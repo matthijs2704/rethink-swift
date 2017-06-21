@@ -74,8 +74,12 @@ HEADER_SEARCH_PATHS = $(inherited) "$(SRCROOT)/Packages/**"
 ```
 
 #### Manual
+To use the driver in an Xcode project, generate an Xcode project file using SPM:
+```
+swift package generate-xcodeproj
+```
 
-Drag Rethink.xcodeproj into your own project, then add Rethink or Rethink iOS as dependency (build targets) and link to it.
+Drag the generated Rethink.xcodeproj into your own project, then add Rethink or Rethink iOS as dependency (build targets) and link to it.
 You should then be able to simply 'import Rethink' from Swift code.
 
 ### License
