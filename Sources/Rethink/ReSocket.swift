@@ -215,11 +215,8 @@ internal class Mutex {
     public init() {
         var attr: pthread_mutexattr_t = pthread_mutexattr_t()
         pthread_mutexattr_init(&attr)
-        #if os(Linux)
-            pthread_mutexattr_settype(&attr, Int(PTHREAD_MUTEX_RECURSIVE))
-        #else
-            pthread_mutexattr_settype(&attr, PTHREAD_MUTEX_RECURSIVE)
-        #endif
+        
+        pthread_mutexattr_settype(&attr, PTHREAD_MUTEX_RECURSIVE)
         
         let err = pthread_mutex_init(&self.mutex, &attr)
         pthread_mutexattr_destroy(&attr)

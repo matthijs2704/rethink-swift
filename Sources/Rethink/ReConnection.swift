@@ -159,7 +159,7 @@ public class ReConnection: NSObject {
 		do {
 			let firstMessage: [String: Any] = ["protocol_version": 0, "authentication_method": "SCRAM-SHA-256", "authentication": scram.clientFirstMessage()]
 			let data = try JSONSerialization.data(withJSONObject: firstMessage, options: [])
-			var zeroTerminatedData = NSData(data: data) as Data
+			var zeroTerminatedData = data
 			zeroTerminatedData.append(&zeroByte, count: 1)
 
 			self.socket.write(zeroTerminatedData) { err in
@@ -180,7 +180,7 @@ public class ReConnection: NSObject {
 											"authentication": shouldSend
 										]
 										let secondReply = try JSONSerialization.data(withJSONObject: secondMessage, options: [])
-										var zeroSecondReply = NSData(data: secondReply) as Data
+										var zeroSecondReply = secondReply
 										zeroSecondReply.append(&zeroByte, count: 1)
 
 										self.socket.write(zeroSecondReply) { err in
