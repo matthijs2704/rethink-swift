@@ -111,7 +111,7 @@ public class ReConnection: NSObject {
 									'max_protocol_version' and 'server_version'. */
 									let reply = try JSONSerialization.jsonObject(with: replyString.data(using: String.Encoding.ascii)!, options: [])
 
-									if let replyDictionary = reply as? [String: AnyObject], let success = replyDictionary["success"] as? NSNumber, success.boolValue {
+									if let replyDictionary = reply as? [String: AnyObject], (replyDictionary["success"] as? Bool) == true {
 										self.performSCRAMAuthentication(username, password: password) { err in
 											if err == nil {
 												// Start read loop
@@ -172,7 +172,7 @@ public class ReConnection: NSObject {
 					do {
 						if let s = replyString {
 							if let reply = try JSONSerialization.jsonObject(with: s.data(using: String.Encoding.ascii)!, options: []) as? [String: AnyObject] {
-								if let success = reply["success"] as? NSNumber, success.boolValue {
+                                if (reply["success"] as? Bool) == true {
                                     let authData = reply["authentication"] as! String
                                     if let shouldSend = try scram.receive(authData) {
 										// Send the generated reply back
@@ -193,7 +193,7 @@ public class ReConnection: NSObject {
 												do {
 													if let s = replyString {
 														if let reply = try JSONSerialization.jsonObject(with: s.data(using: String.Encoding.ascii)!, options: []) as? [String: AnyObject] {
-															if let success = reply["success"] as? NSNumber, success.boolValue {
+															if (reply["success"] as? Bool) == true {
 																let authData = reply["authentication"] as! String
 																try scram.receive(authData)
 																if scram.authenticated {
