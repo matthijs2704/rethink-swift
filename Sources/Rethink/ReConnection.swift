@@ -128,7 +128,7 @@ public class ReConnection: NSObject {
 									else {
 										/* On error, the server will return a null-terminated error string (non JSON), 
 										or a JSON object with 'success' set to false. */
-										let e = ReError.fatal("Server returned \(replyString)")
+										let e = ReError.fatal("E100 Server returned \(replyString)")
 										self.state = .error(e)
 										return callback(e)
 									}
@@ -208,12 +208,12 @@ public class ReConnection: NSObject {
 																	return callback(ReError.fatal(errorString))
 																}
 																else {
-																	return callback(ReError.fatal("Server returned \(s)"))
+																	return callback(ReError.fatal("E101 Server returned \(s)"))
 																}
 															}
 														}
 														else {
-															return callback(ReError.fatal("Server returned \(s)"))
+															return callback(ReError.fatal("E102 Server returned \(s)"))
 														}
 													}
 													else {
@@ -235,12 +235,12 @@ public class ReConnection: NSObject {
 										return callback(ReError.fatal(errorString))
 									}
 									else {
-										return callback(ReError.fatal("Server returned \(s)"))
+										return callback(ReError.fatal("E103 Server returned \(s)"))
 									}
 								}
 							}
 							else {
-								return callback(ReError.fatal("Server returned \(s)"))
+								return callback(ReError.fatal("E104 Server returned \(s)"))
 							}
 						}
 						else {

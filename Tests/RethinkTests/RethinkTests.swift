@@ -21,7 +21,7 @@ class RethinkTests: XCTestCase {
     func testBasicCommands() {
 		asyncTest { testDoneCallback in
 			R.connect(URL(string: "rethinkdb://localhost:28015")!) { (err, connection) in
-				XCTAssert(err == nil, "Connection error: \(err)")
+				XCTAssertNil(err, "Connection error: \(err)")
 
 				print("Connected!")
 				let databaseName = "swift_test"
