@@ -1,6 +1,7 @@
 import XCTest
 import Rethink
 import SCRAM
+import Dispatch
 
 class RethinkTests: XCTestCase {
     let databaseName = "swift_test"
