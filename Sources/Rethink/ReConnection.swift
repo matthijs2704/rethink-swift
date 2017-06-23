@@ -192,7 +192,7 @@ public class ReConnection: NSObject {
 											self.socket.readZeroTerminatedASCII() { replyString in
 												do {
 													if let s = replyString {
-														if let reply = try JSONSerialization.jsonObject(with: s.data(using: String.Encoding.ascii)!, options: []) as? [String: AnyObject] {
+														if let reply = try JSONSerialization.jsonObject(with: s.data(using: String.Encoding.ascii)!, options: []) as? [String: Any] {
 															if (reply["success"] as? Bool) == true {
 																let authData = reply["authentication"] as! String
 																try scram.receive(authData)
