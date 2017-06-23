@@ -181,6 +181,9 @@ class RethinkTests: XCTestCase {
 extension RethinkTests {
     static var allTests : [(String, (RethinkTests) -> () throws -> Void)] {
         return [
+            ("testDateConversionExpression", testDateConversionExpression),
+            ("testDateNowExpression", testDateNowExpression),
+            ("testRangeExpression", testRangeExpression),
             ("testBasicCommands", testBasicCommands)
         ]
     }
