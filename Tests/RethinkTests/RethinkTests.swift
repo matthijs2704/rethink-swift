@@ -137,7 +137,7 @@ class RethinkTests: XCTestCase {
 }
 
 extension RethinkTests {
-    static var allTests : [(String, RethinkTests -> () throws -> Void)] {
+    static var allTests : [(String, (RethinkTests) -> () throws -> Void)] {
         return [
             ("testBasicCommands", testBasicCommands)
         ]

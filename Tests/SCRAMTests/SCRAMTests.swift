@@ -47,7 +47,7 @@ class SCRAMTests: XCTestCase {
 }
 
 extension SCRAMTests {
-    static var allTests : [(String, SCRAMTests -> () throws -> Void)] {
+    static var allTests : [(String, (SCRAMTests) -> () throws -> Void)] {
         return [
             ("testXOR", testXOR),
             ("testSCRAM", testSCRAM)
