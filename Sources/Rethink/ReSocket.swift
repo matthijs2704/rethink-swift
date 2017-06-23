@@ -45,13 +45,9 @@ internal class ReSocket: NSObject {
         if self.privSocketQueues[tag] == nil {
             self.privSocketQueues[tag] = DispatchQueue.init(label: "SocketQueue-\(tag)")
         }
-        print (tag)
+
         return self.privSocketQueues[tag]!
     }
-//    {
-//        num += 1
-//        return
-//    }
     
     internal var delegateQueue: DispatchQueue
     
@@ -108,7 +104,7 @@ internal class ReSocket: NSObject {
         self.delegateQueue.async {
             let tag = (self.readCallbacks.count + 1)
             self.readCallbacks[tag] = callback
-            self.socketQueue(with: "Read\(Int(arc4random_uniform(20) + 100))").async {
+            DispatchQueue.init(label: "SocketQueue-\(tag)").async {
                 do {
                     _ = try tcpSock.waitForReadableData(timeout: nil)
                     var bytes: Bytes = []
@@ -150,7 +146,7 @@ internal class ReSocket: NSObject {
                     callback(nil)
                 }
             }
-            self.socketQueue(with: "Read\(Int(arc4random_uniform(20) + 100))").async {
+            DispatchQueue.init(label: "SocketQueue-\(tag)").async {
                 do {
                     _ = try! tcpSock.waitForReadableData(timeout: nil)
                     var bytes: Bytes = []

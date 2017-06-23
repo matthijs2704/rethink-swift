@@ -78,9 +78,8 @@ class RethinkTests: XCTestCase {
                 
                 print("Connected!")
                 
-                
                 var outstanding = 100
-                var outstandingChanges = 1000
+                var outstandingChanges = 500
                 var reader : ReResponse.Callback? = nil
                 reader = { (response) -> () in
                     XCTAssert(!response.isError, "Failed to fetch documents: \(response)")
@@ -137,7 +136,7 @@ class RethinkTests: XCTestCase {
                             
                             // Insert 1000 documents
                             var docs: [ReDocument] = []
-                            for i in 0..<1000 {
+                            for i in 0..<500 {
                                 docs.append(["foo": "bar", "id": i])
                             }
                             
@@ -146,7 +145,7 @@ class RethinkTests: XCTestCase {
                                 
                                 R.db(self.databaseName).table(self.tableName).filter({ r in return r["foo"].eq(R.expr("bar")) }).count().run(connection) { (response) in
                                     XCTAssert(!response.isError, "Failed to count: \(response)")
-                                    XCTAssert(response.value is NSNumber && (response.value as! NSNumber).intValue == 1000, "Not all documents were inserted, or count is failing: \(response)")
+                                    XCTAssert(response.value is NSNumber && (response.value as! NSNumber).intValue == 500, "Not all documents were inserted, or count is failing: \(response)")
                                     
                                     for _ in 0..<outstanding {
                                         R.db(self.databaseName).table(self.tableName).run(connection, callback: reader!)
