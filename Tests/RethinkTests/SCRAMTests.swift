@@ -23,11 +23,11 @@ class SCRAMTests: XCTestCase {
     
     func testXOR() {
         let testData = "String".data(using: .utf8)!
-        let testKeyData = "Key".data(using: .utf8)!
+        let testKeyData = "gnirtS".data(using: .utf8)!
         let result = testData.xor(with: testKeyData)
-        print (String.init(bytes: result.base64Encoded))
-        //"GBELaW5n"
-        // correct: "GBELIgse"
+        print (result.base64EncodedString())
+        //"NBobGxo0"
+        // correct: "NBobGxo0"
     }
     
     func testNewXOR() {
