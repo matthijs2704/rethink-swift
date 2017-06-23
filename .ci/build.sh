@@ -27,21 +27,15 @@ echo "🖥 Operating System: $OS";
 if [[ $OS != "macos" ]];
 then
     echo "📚 Installing Dependencies"
-    sudo apt-get install -y clang libicu-dev uuid-dev rethinkdb
+    eval "$(curl -sL https://apt.vapor.sh)"
 
     echo "🐦 Installing Swift";
-    if [[ $OS == "ubuntu1510" ]];
-    then
-        SWIFTFILE="swift-$VERSION-RELEASE-ubuntu15.10";
-    else
-        SWIFTFILE="swift-$VERSION-RELEASE-ubuntu14.04";
-    fi
-    wget https://swift.org/builds/swift-$VERSION-release/$OS/swift-$VERSION-RELEASE/$SWIFTFILE.tar.gz
-    tar -zxf $SWIFTFILE.tar.gz
-    export PATH=$PWD/$SWIFTFILE/usr/bin:"${PATH}"
+    sudo apt-get install -y swift ctls rethinkdb
 else
     echo "📚 Installing Dependencies"
-    brew install rethinkdb
+    brew tap vapor/homebrew-tap
+    brew update
+    brew install vapor rethinkdb
 fi
 
 echo "🎛️ Starting RethinkDB server"
