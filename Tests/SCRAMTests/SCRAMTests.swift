@@ -27,16 +27,21 @@ class SCRAMTests: XCTestCase {
         XCTAssertEqual(result.base64EncodedString(), "NBobGxo0")
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testSCRAM() {
+        let s = SCRAM(username: "user", password: "pencil", nonce: "rOprNGfwEbeRWgbNEkqO")
+        XCTAssert(!s.authenticated)
+        XCTAssert(s.clientFirstMessage() == "n,,n=user,r=rOprNGfwEbeRWgbNEkqO")
+        
+        do {
+        let c2 = try s.receive("r=rOprNGfwEbeRWgbNEkqO%hvYDpWUa2RaTCAfuxFIlj)hNlF$k0,s=W22ZaJ0SNY7soEsUEjb6gQ==,i=4096")
+            XCTAssert(!s.authenticated)
+        XCTAssert(c2! == "c=biws,r=rOprNGfwEbeRWgbNEkqO%hvYDpWUa2RaTCAfuxFIlj)hNlF$k0,p=dHzbZapWIk4jUhN+Ute9ytag9zjfMHgsqmmiz7AndVQ=")
+        } catch {
+            XCTFail("Could not parse authentication data")
         }
+        XCTAssert(!s.authenticated)
+        XCTAssert(try s.receive("v=6rriTRBi23WpRR/wtup+mMhUZUn/dB5nLTJRsjl95G4=") == nil)
+        XCTAssert(s.authenticated)
     }
     
 }
