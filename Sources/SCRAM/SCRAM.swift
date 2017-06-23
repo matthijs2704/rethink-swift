@@ -34,114 +34,6 @@ final public class SCRAM {
         return replaceOccurrences(in: replaceOccurrences(in: user, where: "=", with: "=3D"), where: ",", with: "=2C")
     }
     
-//    private func parse(challenge response: String) throws -> (nonce: String, salt: String, iterations: Int) {
-//        var nonce: String? = nil
-//        var iterations: Int? = nil
-//        var salt: String? = nil
-//
-//        for part in response.characters.split(separator: ",") where String(part).characters.count >= 3 {
-//            let part = String(part)
-//
-//            if let first = part.characters.first {
-//                let data = part[part.index(part.startIndex, offsetBy: 2)..<part.endIndex]
-//
-//                switch first {
-//                case "r":
-//                    nonce = data
-//                case "i":
-//                    iterations = Int(data)
-//                case "s":
-//                    salt = data
-//                default:
-//                    break
-//                }
-//            }
-//        }
-//
-//        if let nonce = nonce, let iterations = iterations, let salt = salt {
-//            return (nonce: nonce, salt: salt, iterations: iterations)
-//        }
-//
-//        throw SCRAMError.challengeParseError(challenge: response)
-//    }
-//
-//    private func parse(finalResponse response: String) throws -> Bytes {
-//        var signature: Bytes? = nil
-//
-//        for part in response.characters.split(separator: ",") where String(part).characters.count >= 3 {
-//            let part = String(part)
-//
-//            if let first = part.characters.first {
-//                let data = part[part.index(part.startIndex, offsetBy: 2)..<part.endIndex]
-//
-//                switch first {
-//                case "v":
-//                    signature = data.bytes.base64Decoded
-//                default:
-//                    break
-//                }
-//            }
-//        }
-//
-//        if let signature = signature {
-//            return signature
-//        }
-//
-//        throw SCRAMError.responseParseError(response: response)
-//    }
-//
-//    public func authenticate(_ username: String, usingNonce nonce: String) -> String {
-//        return "\(gs2BindFlag)n=\(fixUsername(username: username)),r=\(nonce)"
-//    }
-//
-//    public func process(_ challenge: String, with details: (username: String, password: Bytes), usingNonce nonce: String) throws -> (proof: String, serverSignature: Bytes) {
-//        let encodedHeader = Bytes(gs2BindFlag.utf8).base64Encoded
-//
-//        let parsedResponse = try parse(challenge: challenge)
-//
-//        let remoteNonce = parsedResponse.nonce
-//
-//        guard String(remoteNonce[remoteNonce.startIndex..<remoteNonce.index(remoteNonce.startIndex, offsetBy: 24)]) == nonce else {
-//            throw SCRAMError.invalidNonce(nonce: parsedResponse.nonce)
-//        }
-//
-//        let noProof = "c=\(encodedHeader),r=\(parsedResponse.nonce)"
-//
-//        let salt = parsedResponse.salt.bytes.base64Decoded
-//        let saltedPassword = try PBKDF2.calculate(details.password, usingSalt: salt, iterating: parsedResponse.iterations)
-//
-//        let ck = Bytes("Client Key".utf8)
-//        let sk = Bytes("Server Key".utf8)
-//
-//        let clientKey = try HMAC.init(.sha256, ck).authenticate(key: saltedPassword)
-//        let serverKey = try HMAC.init(.sha256, sk).authenticate(key: saltedPassword)
-//
-//        let storedKey = try Hash.init(.sha256, clientKey).hash()
-//
-//        let authenticationMessage = "n=\(fixUsername(username: details.username)),r=\(nonce),\(challenge),\(noProof)"
-//
-//        var authenticationMessageBytes = Bytes()
-//        authenticationMessageBytes.append(contentsOf: authenticationMessage.utf8)
-//
-//        let clientSignature = try HMAC.init(.sha256, authenticationMessageBytes).authenticate(key: storedKey)
-//        let clientProof = xor(clientKey, clientSignature)
-//        let serverSignature = try HMAC.init(.sha256, authenticationMessageBytes).authenticate(key: serverKey)
-//
-//        let proof = clientProof.base64Encoded
-//
-//        return (proof: "\(noProof),p=\(proof)", serverSignature: serverSignature)
-//    }
-//
-//    public func complete(fromResponse response: String, verifying signature: Bytes) throws -> String {
-//        let sig = try parse(finalResponse: response)
-//
-//        if sig != signature {
-//            throw SCRAMError.invalidSignature(signature: sig)
-//        }
-//
-//        return ""
-//    }
-    
     func handleAuth1(_ authResponse: String) throws -> String? {
         let auth = SCRAM.dictionary(from: authResponse)
         let numberFormatter = NumberFormatter()
@@ -209,7 +101,7 @@ final public class SCRAM {
         let serverKeyBytes = try HMAC.init(.sha256, "Server Key".makeBytes()).authenticate(key: saltedPasswordData)
         let storedKeyData = try Hash.init(.sha256, clientKeyBytes).hash()
         
-        let authMessageBytes = String.init(format: "%@,%@,c=biws,r=%@", self.clientFirstMessageBare!,self.serverMessage1!,self.combinedNonce!).makeBytes()
+        let authMessageBytes = "\(self.clientFirstMessageBare!),\(self.serverMessage1!),c=biws,r=\(self.combinedNonce!)"
         let clientSignatureBytes = try HMAC.init(.sha256, authMessageBytes).authenticate(key: storedKeyData)
         self.serverSignatureData = try HMAC.init(.sha256, authMessageBytes).authenticate(key: serverKeyBytes)
         self.clientProofData = xor(clientKeyBytes, clientSignatureBytes)
