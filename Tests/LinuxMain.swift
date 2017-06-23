@@ -1,5 +1,5 @@
 //
-//  LinuxTests.swift
+//  LinuxMain.swift
 //  Rethink
 //
 //  Created by Matthijs Logemann on 23/06/2017.
