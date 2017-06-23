@@ -79,7 +79,7 @@ public class ReConnection: NSObject {
 				data.append(Data.dataWithLittleEndianOf(UInt32(self.protocolVersion.protocolVersionCode)))
 			}
 
-			self.socket.write(data as Data) { err in
+			self.socket.write(data) { err in
 				if let e = err {
 					self.state = .error(ReError.fatal(e))
 					return callback(ReError.fatal(e))
@@ -335,7 +335,7 @@ public class ReConnection: NSObject {
 		queue.async {
 			assert(self.outstandingQueries[token] == nil, "A query with token \(token) is already outstanding")
 			assert(self.connected, "Cannot send a query when the connection is not open")
-			let data = NSMutableData(capacity: query.count + 8 + 4)!
+			var data = Data(capacity: query.count + 8 + 4)
 
 			let reffingCallback: ReResponse.Callback = { (res) -> () in
 				// This is used to create a reference to ReConnection, and keeps it alive at least until the query has finished.
@@ -347,7 +347,7 @@ public class ReConnection: NSObject {
 			data.append(Data.dataWithLittleEndianOf(token))
 			data.append(Data.dataWithLittleEndianOf(UInt32(query.count)))
 			data.append(query)
-			self.socket.write(data as Data) { err in
+			self.socket.write(data) { err in
 				if let e = err {
 					self.state = .error(ReError.fatal(e))
 					callback(ReResponse.error(e))

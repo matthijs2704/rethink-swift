@@ -91,12 +91,13 @@ public class ReDatum: ReQueryValue {
 				}
 			}
 			else if t == ReDatum.reqlTypeTime {
-				let epochTime = (self.jsonSerialization as! [String: AnyObject])["epoch_time"] as AnyObject
 				
-				if let timezone = (self.jsonSerialization as! [String: AnyObject])["timezone"] as? String {
+				
+				if let epochTime = (self.jsonSerialization as! [String: AnyObject])["epoch_time"] as? Double,
+                   let timezone = (self.jsonSerialization as! [String: AnyObject])["timezone"] as? String {
 					// TODO: interpret server timezone other than +00:00 (UTC)
 					assert(timezone == "+00:00", "support for timezones other than UTC not implemented (yet)")
-					return Date(timeIntervalSince1970: epochTime as! Double)
+					return Date(timeIntervalSince1970: epochTime)
 				}
 				else {
 					fatalError("invalid date received")

@@ -129,8 +129,8 @@ internal class ReSocket: NSObject {
             let tag = (self.readCallbacks.count + 1)
             self.readCallbacks[tag] = { data in
                 if let d = data {
-                    if let s = NSString(data: d.subdata(in: 0..<(d.count-1)), encoding: String.Encoding.ascii.rawValue) {
-                        callback(String(s))
+                    if let s = String(data: d.subdata(in: 0..<(d.count-1)), encoding: String.Encoding.ascii) {
+                        callback(s)
                     }
                     else {
                         callback(nil)
@@ -215,8 +215,11 @@ internal class Mutex {
     public init() {
         var attr: pthread_mutexattr_t = pthread_mutexattr_t()
         pthread_mutexattr_init(&attr)
-        
-        pthread_mutexattr_settype(&attr, PTHREAD_MUTEX_RECURSIVE)
+        #if os(Linux)
+            pthread_mutexattr_settype(&attr, Int32(PTHREAD_MUTEX_RECURSIVE))
+        #else
+            pthread_mutexattr_settype(&attr, PTHREAD_MUTEX_RECURSIVE)
+        #endif
         
         let err = pthread_mutex_init(&self.mutex, &attr)
         pthread_mutexattr_destroy(&attr)
