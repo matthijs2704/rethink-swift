@@ -27,6 +27,7 @@ echo "🖥 Operating System: $OS";
 if [[ $OS != "macos" ]];
 then
     echo "📚 Installing Dependencies"
+    sudo apt-get install -y clang libicu-dev uuid-dev rethinkdb
     eval "$(curl -sL https://apt.vapor.sh)"
 
     echo "🐦 Installing Swift";
@@ -39,7 +40,7 @@ else
 fi
 
 echo "🎛️ Starting RethinkDB server"
-rethinkdb --deamon
+rethinkdb --daemon
 
 echo "📅 Version: `swift --version`";
 
