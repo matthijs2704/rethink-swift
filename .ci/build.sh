@@ -27,6 +27,8 @@ echo "🖥 Operating System: $OS";
 if [[ $OS != "macos" ]];
 then
     echo "📚 Installing Dependencies"
+    sudo add-apt-repository ppa:rethinkdb/ppa
+    sudo apt-get update
     sudo apt-get install -y clang libicu-dev uuid-dev rethinkdb
     eval "$(curl -sL https://apt.vapor.sh)"
 
