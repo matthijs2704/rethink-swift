@@ -25,6 +25,7 @@ OTHER DEALINGS IN THE SOFTWARE. **/
 import Foundation
 import Sockets
 import SCRAM
+import Dispatch
 
 public class ReConnection: NSObject {
 	public let url: URL
@@ -55,11 +56,7 @@ public class ReConnection: NSObject {
 			}
 
 			// Start authentication
-			guard let data = NSMutableData(capacity: 128) else {
-				let e = ReError.fatal("Could not create data object")
-				self.state = .error(e)
-				return callback(e)
-			}
+            var data = Data(capacity: 128)
 
 			switch self.protocolVersion {
 			case .v0_4:
@@ -380,7 +377,7 @@ private enum ReConnectionState {
 
 private extension Data {
 	static func dataWithLittleEndianOf(_ nr: UInt64) -> Data {
-		var swapped = CFSwapInt64HostToLittle(nr)
+		var swapped = nr.littleEndian
 
 		var bytes: [UInt8] = [0,0,0,0,0,0,0,0]
 		for i in 0...7 {
@@ -392,7 +389,7 @@ private extension Data {
 	}
 
 	static func dataWithLittleEndianOf(_ nr: UInt32) -> Data {
-		var swapped = CFSwapInt32HostToLittle(nr) // No-op on little endian archs
+		var swapped = nr.littleEndian // No-op on little endian archs
 
 		var bytes: [UInt8] = [0,0,0,0]
 		for i in 0...3 {
@@ -413,7 +410,7 @@ private extension Data {
 			}
 		}
 
-		return CFSwapInt64LittleToHost(read)
+		return UInt64(littleEndian: read)
 	}
 
 	func readLittleEndianUInt32(_ atIndex: Int = 0) -> UInt32 {
@@ -426,6 +423,6 @@ private extension Data {
 			}
 		}
 
-		return CFSwapInt32LittleToHost(read)
+        return UInt32(littleEndian: read)
 	}
 }

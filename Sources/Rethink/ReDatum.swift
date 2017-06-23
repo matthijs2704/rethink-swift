@@ -83,7 +83,7 @@ public class ReDatum: ReQueryValue {
 	internal var value: Any { get {
 		if let d = self.jsonSerialization as? [String: Any], let t = d[ReDatum.reqlSpecialKey] as? String {
 			if t == ReDatum.reqlTypeBinary {
-				if let data = (self.jsonSerialization as AnyObject).value(forKey: "data") as? String {
+                if let data = (self.jsonSerialization as! [String: AnyObject])["data"] as? String {
 					return Data(base64Encoded: data, options: [])!
 				}
 				else {
@@ -91,9 +91,9 @@ public class ReDatum: ReQueryValue {
 				}
 			}
 			else if t == ReDatum.reqlTypeTime {
-				let epochTime = (self.jsonSerialization as AnyObject).value(forKey: "epoch_time") as AnyObject
+				let epochTime = (self.jsonSerialization as! [String: AnyObject])["epoch_time"] as AnyObject
 				
-				if let timezone = (self.jsonSerialization as AnyObject).value(forKey: "timezone") as? String {
+				if let timezone = (self.jsonSerialization as! [String: AnyObject])["timezone"] as? String {
 					// TODO: interpret server timezone other than +00:00 (UTC)
 					assert(timezone == "+00:00", "support for timezones other than UTC not implemented (yet)")
 					return Date(timeIntervalSince1970: epochTime as! Double)

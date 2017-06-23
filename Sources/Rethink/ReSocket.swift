@@ -24,6 +24,7 @@
  OTHER DEALINGS IN THE SOFTWARE. **/
 import Foundation
 import Sockets
+import Dispatch
 
 internal enum ReSocketState {
     case unconnected
@@ -60,14 +61,13 @@ internal class ReSocket: NSObject {
         
         guard let scheme = url.scheme else { return callback("Invalid scheme") }
         guard let host = url.host else { return callback("Invalid URL") }
-        let port = (url as NSURL).port ?? 28015
+        let port = url.port ?? 28015
         
         self.socketQueue.async {
             do {
-//                print ("\(Thread.current)")
-                self.socket = try TCPInternetSocket.init(scheme: scheme, hostname: host, port: port as! UInt16)
+                self.socket = try TCPInternetSocket.init(scheme: scheme, hostname: host, port: Port(port))
                 try self.socket!.connect()
-                self.socket(self.socket!, didConnectToHost: host, port: port as! UInt16)
+                self.socket(self.socket!, didConnectToHost: host, port: Port(port))
             }
             catch let e {
                 return callback(e.localizedDescription)
@@ -215,7 +215,11 @@ internal class Mutex {
     public init() {
         var attr: pthread_mutexattr_t = pthread_mutexattr_t()
         pthread_mutexattr_init(&attr)
-        pthread_mutexattr_settype(&attr, PTHREAD_MUTEX_RECURSIVE)
+        #if os(Linux)
+            pthread_mutexattr_settype(&attr, Int(PTHREAD_MUTEX_RECURSIVE))
+        #else
+            pthread_mutexattr_settype(&attr, PTHREAD_MUTEX_RECURSIVE)
+        #endif
         
         let err = pthread_mutex_init(&self.mutex, &attr)
         pthread_mutexattr_destroy(&attr)
