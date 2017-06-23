@@ -196,7 +196,7 @@ final public class SCRAM {
             return false
         }
         
-        if self.password.count > 0 && self.count < 4096 {
+        if self.password.characters.count > 0 && self.count < 4096 {
             return false
         }
         
@@ -256,7 +256,7 @@ final public class SCRAM {
             let key = component.substring(to: separator.lowerBound)
             var value = component.substring(from: separator.upperBound)
             
-            if value.hasPrefix("\"") && value.hasSuffix("\"") && value.count > 2 {
+            if value.hasPrefix("\"") && value.hasSuffix("\"") && value.characters.count > 2 {
                 // Strip quotes from value
                 value.remove(at: value.startIndex)
                 value.remove(at: value.endIndex)
