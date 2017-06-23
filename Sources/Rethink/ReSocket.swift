@@ -39,10 +39,20 @@ internal class ReSocket: NSObject {
     var socket: TCPInternetSocket? = nil
     internal var state: ReSocketState = .unconnected
     var num = 0
-    internal var socketQueue: DispatchQueue {
-        num += 1
-        return DispatchQueue.init(label: "ConnectionThread\(num)")
+    private var privSocketQueues: [String: DispatchQueue] = [:]
+    
+    private func socketQueue(with tag: String) -> DispatchQueue {
+        if self.privSocketQueues[tag] == nil {
+            self.privSocketQueues[tag] = DispatchQueue.init(label: "SocketQueue-\(tag)")
+        }
+        print (tag)
+        return self.privSocketQueues[tag]!
     }
+//    {
+//        num += 1
+//        return
+//    }
+    
     internal var delegateQueue: DispatchQueue
     
     private var onConnect: ((String?) -> ())?
@@ -63,7 +73,7 @@ internal class ReSocket: NSObject {
         guard let host = url.host else { return callback("Invalid URL") }
         let port = url.port ?? 28015
         
-        self.socketQueue.async {
+        self.socketQueue(with: "Connect").async {
             do {
                 self.socket = try TCPInternetSocket.init(scheme: scheme, hostname: host, port: Port(port))
                 try self.socket!.connect()
@@ -98,7 +108,7 @@ internal class ReSocket: NSObject {
         self.delegateQueue.async {
             let tag = (self.readCallbacks.count + 1)
             self.readCallbacks[tag] = callback
-            self.socketQueue.async {
+            self.socketQueue(with: "Read\(Int(arc4random_uniform(20) + 100))").async {
                 do {
                     _ = try tcpSock.waitForReadableData(timeout: nil)
                     var bytes: Bytes = []
@@ -140,7 +150,7 @@ internal class ReSocket: NSObject {
                     callback(nil)
                 }
             }
-            self.socketQueue.async {
+            self.socketQueue(with: "Read\(Int(arc4random_uniform(20) + 100))").async {
                 do {
                     _ = try! tcpSock.waitForReadableData(timeout: nil)
                     var bytes: Bytes = []
@@ -172,7 +182,7 @@ internal class ReSocket: NSObject {
             let tag = (self.writeCallbacks.count + 1)
             self.writeCallbacks[tag] = callback
             let bytes = data.makeBytes()
-            self.socketQueue.async {
+            self.socketQueue(with: "\(tag)").async {
                 _ = try! tcpSock.write(bytes)
                 try! tcpSock.flush()
                 self.socket(tcpSock, didWriteDataWithTag: tag)
